@@ -57,7 +57,7 @@
                     <td>{{ $product->discontinued }}</td>
                     <td>
                         <form action="" method="POST">
-                            <a class="btn btn-info" href="">Show</a>
+                            <a class="btn btn-info" href="{{ route('products.show', $product->id)  }}">Show</a>
                             <a class="btn btn-primary" href="">Edit</a>
                             <!-- @csrf
                             @method('DELETE') -->
