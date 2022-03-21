@@ -11,7 +11,7 @@
         <div class="btn-group" role="group" aria-label="Basic example">
             <!-- <a class="btn btn-primary" href="#">Home</a> -->
             
-            <a class="btn btn-primary" href="">Category</a>
+            <a class="btn btn-primary" href="{{ route('categories.index') }}">Category</a>
             <a class="btn btn-primary" href="{{ route('products.index') }}">Product</a>
             <a type="button" class="btn btn-primary">Supplier</a>
 

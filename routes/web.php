@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
 use PhpParser\Node\Expr\FuncCall;
 
@@ -21,6 +22,11 @@ Route::get('/', function () {
 Route::get('/home', function() {
     return view('homepage');
 });
+
+
 Route::resource('/products', 'ProductController');
+Route::get('/products/{products}','ProductController@edit')->name('products.edit');
+
+Route::resource('/categories', 'CategoriesController');
 
 // Route::get('/products', 'ProductController@index')->name('products.index');

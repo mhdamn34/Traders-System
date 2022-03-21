@@ -58,9 +58,9 @@
                     <td>
                         <form action="" method="POST">
                             <a class="btn btn-info" href="{{ route('products.show', $product->id)  }}">Show</a>
-                            <a class="btn btn-primary" href="">Edit</a>
-                            <!-- @csrf
-                            @method('DELETE') -->
+                            <a class="btn btn-primary" href=" {{ route('products.edit',$product->id) }}">Edit</a>
+                             @csrf
+                            @method('DELETE')
                             <button type="submit" class="btn btn-danger">Delete</button>
                         </form>
                     </td>

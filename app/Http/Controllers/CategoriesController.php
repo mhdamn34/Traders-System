@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Product;
+use App\Models\Category;
 use Illuminate\Http\Request;
 
-class ProductController extends Controller
+class CategoriesController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +14,8 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $products = Product::latest()->paginate(5);
-        return view('products.index', compact('products'))
+        $category = Category::latest()->paginate(5);
+        return view('categories.index', compact('categories'))
 
             ->with('i', (request()->input('page', 1) - 1) * 5);
     }
@@ -27,7 +27,7 @@ class ProductController extends Controller
      */
     public function create()
     {
-        return view('products.create');
+        return view('categories.create');
     }
 
     /**
@@ -38,23 +38,20 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        ///
         $request->validate([
 
-            'productName' => 'required',
-            'quantityPerUnit' => 'required',
-            'unitStock' => 'required',
-            'unitPrice' => 'required',
-            'unitOrder' => 'required',
-            'reorderLevel' => 'required',
-
+            'categoryName' => 'required',
+            'description' => 'required',
+            'picture' => 'required',
+            
 
         ]);
-        Product::create($request->all());
+        Category::create($request->all());
 
 
-        return redirect()->route('products.index')
-            ->with('success', 'Product added successfully.');
+        return redirect()->route('categories.index')
+            ->with('success', 'categories added successfully.');
     }
 
     /**
@@ -63,9 +60,9 @@ class ProductController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Product $product)
+    public function show($id)
     {
-        return view('products.show', compact('product'));
+        return view('categories.show', compact('categories'));
     }
 
     /**
@@ -74,9 +71,9 @@ class ProductController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Request $product)
+    public function edit($id)
     {
-        return view('products.edit', compact('product'));
+        //
     }
 
     /**
@@ -84,26 +81,11 @@ class ProductController extends Controller
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  int  $id
-     * @param  \App\Product  $product
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Product $product, $id)
+    public function update(Request $request, $id)
     {
-        $request->validate([
-
-            'productName' => 'required',
-            'quantityPerUnit' => 'required',
-            'unitStock' => 'required',
-            'unitPrice' => 'required',
-            'unitOrder' => 'required',
-            'reorderLevel' => 'required',
-
-
-
-        ]);
-        $product->update($request->all());
-        return redirect()->route('products.index')
-            ->with('success', 'Product updated successfully');
+        //
     }
 
     /**
