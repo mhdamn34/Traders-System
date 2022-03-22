@@ -97,9 +97,7 @@ Route::get('/orderlist', function() {
 Route::get('/neworder', function() {
     return view('Orders.addNewOrder');
 });
-<<<<<<< Updated upstream
 
-=======
 Route::get('/ListShippers', function() {
     return view('shippers.collectData');
 });
@@ -107,4 +105,3 @@ Route::get('/ListShippers', function() {
 Route::get('/createpurchase', function() {
     return view('purchaseOrders.createPurchase');
 });
->>>>>>> Stashed changes
