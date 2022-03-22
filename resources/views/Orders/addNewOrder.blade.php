@@ -4,7 +4,7 @@
 
 <div class="card">
     <div class="card-header">
-        <h3>Untitled</h3>
+        <h3>Order # (New)</h3>
     </div>
     <nav class="nav">
         <a class="nav-link active" aria-current="page" href="#">Go to Product
@@ -22,10 +22,13 @@
     <thead>
         <ul class="nav nav-tabs">
             <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Product Details</a>
+                <a class="nav-link active" aria-current="page" href="#">Order Details</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Order Purchase History</a>
+                <a class="nav-link active" aria-current="page" href="#">Shipping Information</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Payment Information</a>
             </li>
 
         </ul>
