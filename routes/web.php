@@ -57,9 +57,11 @@ Route::resource('/categories', 'CategoriesController');
 // Route::get('/products', 'ProductController@index')->name('products.index');
 
 // Route Shipper
-Route::get('/shippers', function() {
-    return view('shippers.shippersHome');
-});
+
+// Route::get('/shippers', function() {
+//     return view('shippers.shippersHome');
+// });
+Route::get('/shippers', 'ShipperController@index');
 
 Route::get('/NewShippers', function() {
     return view('shippers.newShipper');

@@ -41,20 +41,15 @@
             </tr>
 
         <tbody>
+            @foreach($shippers as $shipper)
+
             <tr>
-                <td>1</td>
-                <td>Shipping Company A</td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>Shipping Company B</td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td>Shipping Company C</td>
+                <td>{{$shipper->ID}}</td>
+                <td>{{$shipper->Company}}</td>
             </tr>
 
 
+            @endforeach
         </tbody>
         </thead>
 
