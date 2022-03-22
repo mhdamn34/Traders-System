@@ -46,15 +46,16 @@
 
             <tbody>
                 
-                @foreach($suppliers as $supplier)
+            @foreach($suppliers as $supplier)
+            
                 <tr>
                     <td scope="row">{{ $supplier->ID}} </td>
                     <td> {{ $supplier->Company}}</td>
-                    <td> {{ $supplier->First Name}} </td>
-                    <td> {{ $supplier->Last Name}}</td>
-                    <td> {{ $supplier->E-mail Address}}</td>
-                    <td> {{ $supplier->Bussiness Phone}}</td>
-                    <td> {{ $supplier->Job Title}}</td>
+                    <td> {{ $supplier->FirstName}} </td>
+                    <td> {{ $supplier->LastName}}</td>
+                    <td> {{ $supplier->EmailAddress}}</td>
+                    <td> {{ $supplier->BussinessPhone}}</td>
+                    <td> {{ $supplier->JobTitle}}</td>
                 </tr>
                 @endforeach
             </tbody>

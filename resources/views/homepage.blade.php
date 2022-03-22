@@ -11,9 +11,12 @@
         <div class="btn-group" role="group" aria-label="Basic example">
             <!-- <a class="btn btn-primary" href="#">Home</a> -->
             
-            <a class="btn btn-primary" href="{{ route('categories.index') }}">Category</a>
-            <a class="btn btn-primary" href="{{ route('products.index') }}">Product</a>
-            <a type="button" class="btn btn-primary">Supplier</a>
+            <a class="btn btn-primary" href=" {{ url('/suppliers') }} ">Supplier</a>
+            <a class="btn btn-primary" href="">Shipper</a>
+            <a class="btn btn-primary" href="">Orders</a>
+            <a class="btn btn-primary" href="">Purchase Orders</a>
+            <a class="btn btn-primary" href="">Employees</a>
+            <!-- <a type="button" class="btn btn-primary">Supplier</a> -->
 
         </div>
     </div>

@@ -24,9 +24,20 @@ Route::get('/home', function() {
 });
 
 
-Route::resource('/products', 'ProductController');
-Route::get('/products/{products}','ProductController@edit')->name('products.edit');
+// Route::resource('/products', 'ProductController');
+Route::get('/products', 'ProductController@index')->name('products.index');
+Route::get('/products/create', 'ProductController@create')->name('products.create');
+Route::post('/products', 'ProductController@store')->name('products.store');
+Route::get('/products/{product}', 'ProductController@show')->name('products.show');
+Route::get('/products/{product}/edit', 'ProductController@edit')->name('products.edit');
+Route::patch('/products/{product}', 'ProductController@update')->name('products.update');
+Route::delete('/products/{product}', 'ProductController@destroy')->name('products.destroy');
 
+//ROUTE SUPPLIER
+Route::get('/suppliers', 'SupplierController@index');
+
+
+//ROUTE CATEGORY
 Route::resource('/categories', 'CategoriesController');
 
 // Route::get('/products', 'ProductController@index')->name('products.index');
