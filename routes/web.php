@@ -38,3 +38,23 @@ Route::get('/shippers', function() {
 Route::get('/NewShippers', function() {
     return view('shippers.newShipper');
 });
+
+Route::get('/InventoryHome', function() {
+    return view('InventoryHome.viewInventory');
+});
+
+Route::get('/addproduct', function() {
+    return view('InventoryHome.AddProduct');
+});
+
+Route::get('/purchasehistory', function() {
+    return view('InventoryHome.orderandpurchasehistory');
+});
+
+Route::get('/orderlist', function() {
+    return view('Orders.orderhome');
+});
+
+Route::get('/neworder', function() {
+    return view('Orders.addNewOrder');
+});
