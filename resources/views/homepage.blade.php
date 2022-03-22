@@ -13,8 +13,8 @@
             
             <a class="btn btn-primary" href=" {{ url('/suppliers') }} ">Supplier</a>
             <a class="btn btn-primary" href="{{ url('/shippers') }}">Shipper</a>
-            <a class="btn btn-primary" href="">Orders</a>
-            <a class="btn btn-primary" href=" {{ url('/purchase')}} ">Purchase Orders</a>
+            <a class="btn btn-primary" href="{{ url('/orders') }}">Orders</a>
+            <a class="btn btn-primary" href=" ">Purchase Orders</a>
             <a class="btn btn-primary" href="">Employees</a>
             <!-- <a type="button" class="btn btn-primary">Supplier</a> -->
 

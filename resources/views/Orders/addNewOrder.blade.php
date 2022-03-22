@@ -143,7 +143,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                @foreach($orders as $neworder)
+               
                
                     <tr>
                         <th></th>
@@ -152,10 +152,10 @@
                         <th></th>
                         <th></th>
                         <th></th>
-                        <th>{{$neworder->StatusID}}</th>
+                        <th></th>
 
                     </tr>
-                    @endforeach
+                   
                 </tbody>
 
 

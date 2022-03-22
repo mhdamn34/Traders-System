@@ -15,8 +15,8 @@ class OrderController extends Controller
         $orders=Order::all();
         return view('Orders.orderhome',compact('orders'));
 
-        $orders=Order::all();
-        return view('Orders.addNewOrder', compact('orders'));
+        // $orders=Order::all();
+        // return view('Orders.addNewOrder', compact('orders'));
 
     }
     public function dropDownShow(Request $request)
