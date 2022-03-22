@@ -92,9 +92,11 @@ Route::get('/purchasehistory', function() {
 
 
 //Route Order 
-Route::get('/orderlist', function() {
-    return view('Orders.orderhome');
-});
+// Route::get('/orderlist', function() {
+//     return view('Orders.orderhome');
+// });
+
+Route::get('/orders', 'OrderController@index');
 
 Route::get('/neworder', function() {
     return view('Orders.addNewOrder');

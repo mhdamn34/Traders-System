@@ -45,17 +45,17 @@
                     <div class="mb-3 row">
                         <label for="customer" class="col-sm-2 col-form-label">Customer</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" aria-label="Text input with dropdown button">
-                            <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"></button>
-                            <ul class="dropdown-menu dropdown-menu-end">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="#">Separated link</a></li>
-                            </ul>
+
+
+                            <div class="col">
+                                <div class="input-group mb-3" class="form-group">
+                                    <select class="form-select" id="createdSelect">
+                                        <option selected> </option>
+                                        <option value="1">Company A</option>
+                                        <option value="2">Company AA</option>
+                                    </select>
+                                </div>
+                            </div>
                         </div>
 
                     </div>
@@ -73,25 +73,30 @@
                     <div class="mb-3 row">
                         <label for="customer" class="col-sm-2 col-form-label">Salesperson</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" aria-label="Text input with dropdown button">
-                            <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"></button>
-                            <ul class="dropdown-menu dropdown-menu-end">
-                                <li><a class="dropdown-item" href="#">Andrew Cencini/a></li>
-                                <li><a class="dropdown-item" href="#">Anne Hellung-Larsen</a></li>
-                                <li><a class="dropdown-item" href="#">Jan Kotas</a></li>
-                                <li><a class="dropdown-item" href="#">Laura Giussani</a></li>
-                                <li><a class="dropdown-item" href="#">Mariya Sergienko</a></li>
-                                <li><a class="dropdown-item" href="#">Michael Neiper</a></li>
-                                <li><a class="dropdown-item" href="#">Nancy Freehafer</a></li>
-                                <li><a class="dropdown-item" href="#">Robert Zare</a></li>
-                                <li><a class="dropdown-item" href="#">Steven Thorpe</a></li>
-                            </ul>
+                        <div class="col">
+                                <div class="input-group mb-3" class="form-group">
+                                    <select class="form-select" id="createdSelect">
+                                        <option selected> </option>
+                                        <option value="1">Andrew Cencin</option>
+                                        <option value="2">Anne Hellung-Larsen</option>
+                                        <option value="3">Jan Kotas</option>
+                                        <option value="4">Laura Giussani</option>
+                                        <option value="5">Mariya Sergienko</option>
+                                        <option value="6">Michael Neiper</option>
+                                        <option value="7">Nancy Freehafer</option>
+                                        <option value="8">Robert Zare</option>
+                                        <option value="9">Steven Thorpe</option>
+
+                                        
+                                    </select>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="mb-3 row">
                         <label for="customer" class="col-sm-2 col-form-label">Order Date</label>
                         <div class="col-sm-10">
-                            <input type="customer" class="form-control" id="customer">
+                        <input type="date" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
                         </div>
                     </div>
 
@@ -138,6 +143,8 @@
                     </tr>
                 </thead>
                 <tbody>
+                @foreach($orders as $neworder)
+               
                     <tr>
                         <th></th>
                         <th>Total</th>
@@ -145,10 +152,10 @@
                         <th></th>
                         <th></th>
                         <th></th>
-                        <th></th>
+                        <th>{{$neworder->StatusID}}</th>
 
                     </tr>
-
+                    @endforeach
                 </tbody>
 
 
