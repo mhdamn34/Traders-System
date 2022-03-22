@@ -10,13 +10,13 @@
     <thead>
         <ul class="nav nav-tabs">
             <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Add New Order</a>
+                <a class="nav-link active" aria-current="page" href="{{url('/neworder')}}">Add New Order</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="#">View Invoice</a>
             </li>
 
-            <a class="nav-link" href="#">Home</a>
+            <a class="nav-link" href="{{url('/InventoryHome/InventoryHome')}}">Home</a>
 
         </ul>
 

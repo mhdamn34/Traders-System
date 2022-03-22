@@ -32,7 +32,7 @@
                 </ul>
                 <form class="d-flex">
 
-                    <button class="btn btn-outline-success" type="submit">Home</button>
+                    <button class="btn btn-outline-success" type="submit">Close</button>
                 </form>
 
             </div>

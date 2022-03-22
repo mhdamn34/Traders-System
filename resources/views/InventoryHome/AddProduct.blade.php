@@ -16,7 +16,7 @@
             </select>
         </a>
         <a class="nav-link" href="#">Save and New</a>
-        <a class="nav-link" href="#">Close</a>
+        <a class="nav-link" href="{{url('/addproduct')}}">Close</a>
 
     </nav>
     <thead>
