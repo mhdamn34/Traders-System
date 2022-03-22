@@ -19,6 +19,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+//HOMEPAGE
 Route::get('/home', function() {
     return view('homepage');
 });
@@ -35,6 +36,19 @@ Route::delete('/products/{product}', 'ProductController@destroy')->name('product
 
 //ROUTE SUPPLIER
 Route::get('/suppliers', 'SupplierController@index');
+// Route::get('/newSupplier','SupplierController@create');
+Route::get('/newSupplier', function() {
+    return view('suppliers.createSupplier');
+});
+
+
+//PURCHASE ORDERS
+Route::get('/purchase', function() {
+    return view('purchaseOrders.purchaseHome');
+});
+Route::get('/createPurchase', function() {
+    return view('purchaseOrders.createPurchase');
+});
 
 
 //ROUTE CATEGORY
