@@ -30,3 +30,11 @@ Route::get('/products/{products}','ProductController@edit')->name('products.edit
 Route::resource('/categories', 'CategoriesController');
 
 // Route::get('/products', 'ProductController@index')->name('products.index');
+
+Route::get('/shippers', function() {
+    return view('shippers.shippersHome');
+});
+
+Route::get('/NewShippers', function() {
+    return view('shippers.newShipper');
+});
