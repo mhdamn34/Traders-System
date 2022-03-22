@@ -35,7 +35,7 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <label for="cars">Select output format:</label>
+                <label for="output">Select output format:</label>
 
                 <select name="output" id="output">
                     <option value=""></option>

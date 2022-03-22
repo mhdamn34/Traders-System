@@ -42,6 +42,7 @@ Route::resource('/categories', 'CategoriesController');
 
 // Route::get('/products', 'ProductController@index')->name('products.index');
 
+// Route Shipper
 Route::get('/shippers', function() {
     return view('shippers.shippersHome');
 });
@@ -50,6 +51,17 @@ Route::get('/NewShippers', function() {
     return view('shippers.newShipper');
 });
 
+Route::get('/ListShippers', function() {
+    return view('shippers.collectData');
+});
+
+//Route Sales
+Route::get('/SalesReport', function() {
+    return view('sales.salesreport');
+});
+
+
+//Route Inventory
 Route::get('/InventoryHome', function() {
     return view('InventoryHome.viewInventory');
 });
@@ -62,6 +74,8 @@ Route::get('/purchasehistory', function() {
     return view('InventoryHome.orderandpurchasehistory');
 });
 
+
+//Route Order 
 Route::get('/orderlist', function() {
     return view('Orders.orderhome');
 });
@@ -69,6 +83,4 @@ Route::get('/orderlist', function() {
 Route::get('/neworder', function() {
     return view('Orders.addNewOrder');
 });
-Route::get('/ListShippers', function() {
-    return view('shippers.collectData');
-});
+
