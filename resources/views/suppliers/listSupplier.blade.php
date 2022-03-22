@@ -10,7 +10,7 @@
             <div class="col">
                 <ul class="nav nav-pills">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#"> New Supplier</a>
+                        <a class="nav-link active" aria-current="page" href=" {{ url('/newSupplier') }} "> New Supplier</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#"> Collect Data via E-mail</a>
@@ -30,6 +30,16 @@
     </div>
 
     <div class="card-body">
+
+
+        @if ($message = Session::get('success'))
+        <div class="alert alert-success">
+
+            <p>{{ $message }}</p>
+
+        </div>
+        @endif
+
         <table class="table table-bordered">
             <thead>
                 <tr>
@@ -49,7 +59,7 @@
                 @foreach($suppliers as $supplier)
 
                 <tr>
-                    <td scope="row">{{ $supplier->ID}} </td>
+                    <td scope="row">{{ $supplier->id }} </td>
                     <td> {{ $supplier->Company}}</td>
                     <td> {{ $supplier->FirstName}} </td>
                     <td> {{ $supplier->LastName}}</td>

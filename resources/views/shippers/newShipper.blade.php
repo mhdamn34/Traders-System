@@ -82,7 +82,7 @@
                     <div class="row mb-3">
                         <label for="firstname" class="col-sm-3 col-form-label">First Name</label>
                         <div class="col-sm-9">
-                            <input type="text" name="firstname"class="form-control" id="firstname">
+                            <input type="text" name="firstname" class="form-control" id="firstname">
                         </div>
                     </div>
 
@@ -106,7 +106,7 @@
                     <div class="row mb-3">
                         <label for="businessphone" class="col-sm-3 col-form-label">Business Phone</label>
                         <div class="col-sm-9">
-                            <input type="number" name="class="form-control" id="business">
+                            <input type="number" name="class=" form-control" id="business">
                         </div>
                     </div>
 

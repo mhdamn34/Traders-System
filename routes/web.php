@@ -34,11 +34,26 @@ Route::get('/products/{product}/edit', 'ProductController@edit')->name('products
 Route::patch('/products/{product}', 'ProductController@update')->name('products.update');
 Route::delete('/products/{product}', 'ProductController@destroy')->name('products.destroy');
 
+
+
 //ROUTE SUPPLIER
-Route::get('/suppliers', 'SupplierController@index');
+Route::get('/suppliers', 'SupplierController@index')->name('suppliers.index');
+Route::post('/suppliers', 'SupplierController@store')->name('suppliers.store');
 // Route::get('/newSupplier','SupplierController@create');
 Route::get('/newSupplier', function() {
     return view('suppliers.createSupplier');
+});
+
+
+
+//ROUTE EMPLOYEE
+Route::get('/employee', 'EmployeeController@index')->name('employees.index');
+// Route::get('/employee', function() {
+//     return view('employees.employeesHome');
+// });
+// Route::get('/createEmployee', 'EmployeeController@create')->name('employees.create');
+Route::get('/createEmployee', function() {
+    return view('employees.createEmployee');
 });
 
 
@@ -51,13 +66,13 @@ Route::get('/createPurchase', function() {
 });
 
 
+
 //ROUTE CATEGORY
 Route::resource('/categories', 'CategoriesController');
 
-// Route::get('/products', 'ProductController@index')->name('products.index');
+
 
 // Route Shipper
-
 // Route::get('/shippers', function() {
 //     return view('shippers.shippersHome');
 // });
@@ -71,10 +86,13 @@ Route::get('/ListShippers', function() {
     return view('shippers.collectData');
 });
 
+
+
 //Route Sales
 Route::get('/SalesReport', function() {
     return view('sales.salesreport');
 });
+
 
 
 //Route Inventory
@@ -89,6 +107,7 @@ Route::get('/addproduct', function() {
 Route::get('/purchasehistory', function() {
     return view('InventoryHome.orderandpurchasehistory');
 });
+
 
 
 //Route Order 
