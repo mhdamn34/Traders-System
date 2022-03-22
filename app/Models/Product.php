@@ -11,3 +11,4 @@ class Product extends Model
         'productName','quantityPerUnit','unitPrice', 'unitStock', 'unitOrder', 'reorderLevel', 'discontinued'
     ];
 }
+

@@ -31,17 +31,24 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel"></h5>
+                <h5 class="modal-title" id="exampleModalLabel">Send Object As</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
                 <label for="cars">Select output format:</label>
 
                 <select name="output" id="output">
+                    <option value=""></option>
                     <option value="xls">Excel 97 - Excel 2003 Workbook (*.xls)</option>
                     <option value="xlsb">Excel Binary Workbook (*.xlsb)</option>
-                    <option value="mercedes">Mercedes</option>
-                    <option value="audi">Audi</option>
+                    <option value="xlsx">Excel Workbook (*xlsx)</option>
+                    <option value="html">HTML (*.htm; *.html)</option>
+                    <option value="html">HTML (*.htm; *.html)</option>
+                    <option value="workbook">Microsoft Excel 5.0/95 Workbook (*.xls)</option>
+                    <option value="pdf">PDF Format (*.pdf)</option>
+                    <option value="rtf">Rich Text Format (*.rtf)</option>
+                    <option value="txt">Text Files (*.txt)</option>
+                    <option value="xps">XPS Format (*.xps)</option>
                 </select>
             </div>
             <div class="modal-footer">

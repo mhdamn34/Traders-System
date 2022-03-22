@@ -58,3 +58,6 @@ Route::get('/orderlist', function() {
 Route::get('/neworder', function() {
     return view('Orders.addNewOrder');
 });
+Route::get('/ListShippers', function() {
+    return view('shippers.collectData');
+});

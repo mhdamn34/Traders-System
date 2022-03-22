@@ -11,7 +11,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">New Shipper <span class="sr-only"></span></a>
+                    <a class="nav-link" href="{{url('/NewShippers')}}">New Shipper <span class="sr-only"></span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Collect Data via E-mail</a>
@@ -26,7 +26,7 @@
         </div>
     </nav>
 </div>
-
+<br>
 <div class="card">
     <table class="table table-bordered mt-3">
         <thead class="table-primary">
