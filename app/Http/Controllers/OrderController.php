@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use App\Models\Order;
+use App\Models\OrderStatus;
 use Illuminate\Http\Request;
+
 
 class OrderController extends Controller
 {
@@ -12,7 +14,8 @@ class OrderController extends Controller
 
     public function index(){
 
-        $orders=Order::all();
+        $orders=Order::join('orderstatus','orders.StatusID','orderstatus.StatusID')->get();
+
         return view('Orders.orderhome',compact('orders'));
 
         // $orders=Order::all();

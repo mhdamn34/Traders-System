@@ -16,7 +16,7 @@
                 <a class="nav-link active" aria-current="page" href="#">View Invoice</a>
             </li>
 
-            <a class="nav-link" href="{{url('/InventoryHome/InventoryHome')}}">Home</a>
+            <a class="nav-link" href="{{ url('/home') }}">Home</a>
 
         </ul>
 
@@ -47,7 +47,7 @@
             <tr>
                 <td>{{$order->OrderID}}</td>
                 <td>{{$order->OrderDate}}</td>
-                <td>{{$order->Status}}</td>
+                <td>{{$order->StatusName}}</td>
                 <td>{{$order->Salesperson}}</td>
                 <td>{{$order->customer}}</td>
                 <td>{{$order->ShippedDate}}</td>

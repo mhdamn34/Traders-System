@@ -116,6 +116,7 @@ Route::get('/purchasehistory', function() {
 // });
 
 Route::get('/orders', 'OrderController@index');
+// Route::get('/neworder', 'OrderController@index');
 
 Route::get('/neworder', function() {
     return view('Orders.addNewOrder');
