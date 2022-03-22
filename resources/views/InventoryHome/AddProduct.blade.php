@@ -43,40 +43,47 @@
             <div class="col">
 
                 <div class="row mb-3">
-                    <label for="inputEmail3" class="col-sm-2 col-form-label">Product ID</label>
+                    <label for="productID" class="col-sm-2 col-form-label">Product ID</label>
                     <div class="col-sm-10">
-                        <input type="email" class="form-control" id="inputEmail3">
+                        <input type="email" class="form-control" id="productID">
                     </div>
                 </div>
 
                 <div class="row mb-3">
-                    <label for="inputEmail3" class="col-sm-2 col-form-label">Name</label>
+                    <label for="name" class="col-sm-2 col-form-label">Name</label>
                     <div class="col-sm-10">
-                        <input type="email" class="form-control" id="inputEmail3">
+                        <input type="name" class="form-control" id="name">
                     </div>
                 </div>
                 <div class="row mb-3">
-                    <label for="inputEmail3" class="col-sm-2 col-form-label">Product Code</label>
+                    <label for="productcode" class="col-sm-2 col-form-label">Product Code</label>
                     <div class="col-sm-10">
-                        <input type="email" class="form-control" id="inputEmail3">
+                        <input type="productcode" class="form-control" id="productcode">
                     </div>
                 </div>
                 <div class="row mb-3">
-                    <label for="inputEmail3" class="col-sm-2 col-form-label">Category</label>
+                    <label for="category" class="col-sm-2 col-form-label">Category</label>
                     <div class="col-sm-10">
-                        <input type="email" class="form-control" id="inputEmail3">
+                        <input type="category" class="form-control" id="category">
                     </div>
                 </div>
                 <div class="row mb-3">
-                    <label for="inputEmail3" class="col-sm-2 col-form-label">Supplier</label>
+                    <label for="supplier" class="col-sm-2 col-form-label">Supplier</label>
                     <div class="col-sm-10">
-                        <input type="email" class="form-control" id="inputEmail3">
+                        <input type="supplier" class="form-control" id="supplier">
                     </div>
                 </div>
                 <div class="row mb-3">
-                    <label for="inputEmail3" class="col-sm-2 col-form-label">Quantity Per Unit</label>
+                    <label for="qtyperunit" class="col-sm-2 col-form-label">Quantity Per Unit</label>
                     <div class="col-sm-10">
-                        <input type="email" class="form-control" id="inputEmail3">
+                        <input type="qtyperunit" class="form-control" id="qtyperunit">
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <label for="description" class="col-sm-2 col-form-label">Decription </label>
+                    <div class="mb-3">
+
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                     </div>
                 </div>
 
@@ -87,27 +94,27 @@
             <div class="col">
 
                 <div class="row mb-3">
-                    <label for="inputEmail3" class="col-sm-2 col-form-label">Standard Cost</label>
+                    <label for="standardcost" class="col-sm-2 col-form-label">Standard Cost</label>
                     <div class="col-sm-10">
-                        <input type="email" class="form-control" id="inputEmail3">
+                        <input type="standardcost" class="form-control" id="standardcost">
                     </div>
                 </div>
                 <div class="row mb-3">
-                    <label for="inputEmail3" class="col-sm-2 col-form-label">List Price</label>
+                    <label for="listprice" class="col-sm-2 col-form-label">List Price</label>
                     <div class="col-sm-10">
-                        <input type="email" class="form-control" id="inputEmail3">
+                        <input type="listprice" class="form-control" id="listprice">
                     </div>
                 </div>
                 <div class="row mb-3">
-                    <label for="inputEmail3" class="col-sm-2 col-form-label">Reorder Level</label>
+                    <label for="reorderlevel" class="col-sm-2 col-form-label">Reorder Level</label>
                     <div class="col-sm-10">
-                        <input type="email" class="form-control" id="inputEmail3">
+                        <input type="reorderlevel" class="form-control" id="reorderlevel">
                     </div>
                 </div>
                 <div class="row mb-3">
-                    <label for="inputEmail3" class="col-sm-2 col-form-label">Target Level</label>
+                    <label for="targetlevel" class="col-sm-2 col-form-label">Target Level</label>
                     <div class="col-sm-10">
-                        <input type="email" class="form-control" id="inputEmail3">
+                        <input type="targetlevel" class="form-control" id="targetlevel">
                     </div>
                 </div>
                 <div class="row mb-3">
@@ -126,9 +133,9 @@
 
                 </div>
                 <div class="row mb-3">
-                    <label for="inputEmail3" class="col-sm-2 col-form-label">Attachments</label>
-                    <div class="col-sm-10">
-                        <input type="email" class="form-control" id="inputEmail3">
+                    <label for="attachments" class="col-sm-2 col-form-label">Attachments</label>
+                    <div class="mb-3">
+                        <input class="form-control" type="file" id="formFile" rows="3">
                     </div>
                 </div>
             </div>

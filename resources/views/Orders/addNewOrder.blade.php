@@ -6,8 +6,34 @@
     <div class="card-header">
         <h3>Order # (New)</h3>
     </div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+      <a class="navbar-brand" href="#">Hidden brand</a>
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Status</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Create Invoice</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link ">Ship Order</a>
+        </li>
+      </ul>
+       <form class="d-flex">
+        
+        <button class="btn btn-outline-success" type="submit">Home</button>
+      </form>
+     
+    </div>
+  </div>
+</nav>
     <nav class="nav">
-        <a class="nav-link active" aria-current="page" href="#">Go to Product
+        <a class="" aria-current="page" href="#">Go to Product
             <select name="" id="">
                 <option value="volvo">Volvo</option>
                 <option value="saab">Saab</option>
@@ -15,10 +41,16 @@
                 <option value="audi">Audi</option>
             </select>
         </a>
-        <a class="nav-link" href="#">Save and New</a>
-        <a class="nav-link" href="#">Close</a>
+        <div class="row">
+            <div class="col">
 
+            </div>
+            <div class="col">
+                
+            </div>
+        </div>
     </nav>
+    
     <thead>
         <ul class="nav nav-tabs">
             <li class="nav-item">
@@ -28,118 +60,43 @@
                 <a class="nav-link active" aria-current="page" href="#">Shipping Information</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Payment Information</a>
+                <a class="nav-link active" aria-current="page" href="#">Shipping Information</a>
             </li>
 
         </ul>
 
     </thead>
+  
+   
 
 </div>
-</head>
 
-<div class="card-body">
-    <table class="table">
+<body>
+    <div class="card">
+    <div class="card-body">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>*</th>
+                    <th>Product</th>
+                    <th>Qty</th>
+                    <th>Unit Price</th>
+                    <th>Discount</th>
+                    <th>Total Price</th>
+                    <th>Status</th>
+                    
+                </tr>
+            </thead>
 
+          
+        </table>
+    </div>
 
-        <div class="row">
-            <div class="col">
+    </div>
 
-                <div class="row mb-3">
-                    <label for="inputEmail3" class="col-sm-2 col-form-label">Product ID</label>
-                    <div class="col-sm-10">
-                        <input type="email" class="form-control" id="inputEmail3">
-                    </div>
-                </div>
-
-                <div class="row mb-3">
-                    <label for="inputEmail3" class="col-sm-2 col-form-label">Name</label>
-                    <div class="col-sm-10">
-                        <input type="email" class="form-control" id="inputEmail3">
-                    </div>
-                </div>
-                <div class="row mb-3">
-                    <label for="inputEmail3" class="col-sm-2 col-form-label">Product Code</label>
-                    <div class="col-sm-10">
-                        <input type="email" class="form-control" id="inputEmail3">
-                    </div>
-                </div>
-                <div class="row mb-3">
-                    <label for="inputEmail3" class="col-sm-2 col-form-label">Category</label>
-                    <div class="col-sm-10">
-                        <input type="email" class="form-control" id="inputEmail3">
-                    </div>
-                </div>
-                <div class="row mb-3">
-                    <label for="inputEmail3" class="col-sm-2 col-form-label">Supplier</label>
-                    <div class="col-sm-10">
-                        <input type="email" class="form-control" id="inputEmail3">
-                    </div>
-                </div>
-                <div class="row mb-3">
-                    <label for="inputEmail3" class="col-sm-2 col-form-label">Quantity Per Unit</label>
-                    <div class="col-sm-10">
-                        <input type="email" class="form-control" id="inputEmail3">
-                    </div>
-                </div>
+</body>
 
 
 
-
-            </div>
-            <div class="col">
-
-                <div class="row mb-3">
-                    <label for="inputEmail3" class="col-sm-2 col-form-label">Standard Cost</label>
-                    <div class="col-sm-10">
-                        <input type="email" class="form-control" id="inputEmail3">
-                    </div>
-                </div>
-                <div class="row mb-3">
-                    <label for="inputEmail3" class="col-sm-2 col-form-label">List Price</label>
-                    <div class="col-sm-10">
-                        <input type="email" class="form-control" id="inputEmail3">
-                    </div>
-                </div>
-                <div class="row mb-3">
-                    <label for="inputEmail3" class="col-sm-2 col-form-label">Reorder Level</label>
-                    <div class="col-sm-10">
-                        <input type="email" class="form-control" id="inputEmail3">
-                    </div>
-                </div>
-                <div class="row mb-3">
-                    <label for="inputEmail3" class="col-sm-2 col-form-label">Target Level</label>
-                    <div class="col-sm-10">
-                        <input type="email" class="form-control" id="inputEmail3">
-                    </div>
-                </div>
-                <div class="row mb-3">
-                    <label for="inputEmail3" class="col-sm-2 col-form-label">Default Reorder Quantity</label>
-
-                    <div class="row mb-1">
-                        <div class="col-sm-10 offset-sm-2">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="gridCheck1">
-                                <label class="form-check-label" for="gridCheck1">
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-
-
-                </div>
-                <div class="row mb-3">
-                    <label for="inputEmail3" class="col-sm-2 col-form-label">Attachments</label>
-                    <div class="col-sm-10">
-                        <input type="email" class="form-control" id="inputEmail3">
-                    </div>
-                </div>
-            </div>
-
-
-            </body>
-
-        </div>
-</div>
 
 @endsection
