@@ -11,7 +11,7 @@
                 status
             </div>
             <div class="col-8 text-align-center">
-                <ul class="nav justify-content-center">
+                <ul class="nav flex-column justify-content-center">
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#">Submit for approval</a>
                     </li>

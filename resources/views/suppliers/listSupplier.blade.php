@@ -24,7 +24,7 @@
                 </ul>
             </div>
             <div class="col d-flex justify-content-end">
-                <a href="" class="btn btn-secondary"> Home</a>
+                <a href=" {{ url('/home') }} " class="btn btn-secondary"> Home</a>
             </div>
         </div>
     </div>
@@ -45,9 +45,9 @@
 
 
             <tbody>
-                
-            @foreach($suppliers as $supplier)
-            
+
+                @foreach($suppliers as $supplier)
+
                 <tr>
                     <td scope="row">{{ $supplier->ID}} </td>
                     <td> {{ $supplier->Company}}</td>
