@@ -1,89 +1,88 @@
-@extends('layouts.app')
+@extends('layouts.main.app')
 
 @section('content')
-<div class="content-header">
-    <div class="container-fluid">
-        <div class="row mb-2">
-            <div class="col-sm-6">
-                <h1 class=m-0>Customer List</h1>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="container-fluid">
-    <div class="row justify-content-center">
-        <div class="col-lg-12">
-            <div class="card">
-                <div class="card-body">
-                    <div class="form-group">
-                        <!--Button Trigger modal-->
-                        <div class="col-md-3">
-                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">New Customer</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="card">
-        <div class="card-body">
-            <table class="table table-bordered">
-                <thead>
-                    <tr>
-                        <th>Id</th>
-                        <th>Company</th>
-                        <th>First Name</th>
-                        <th>Last Name</th>
-                        <th>E-mail Address</th>
-                        <th>Business Phone</th>
-                        <th>Job Title</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach($customers as $customer)
-                    <tr>
-                        <td>{{ $customer->id }}</td>
-                        <td>{{ $customer->company }}</td>
-                        <td>{{ $customer->first_name }}</td>
-                        <td>{{ $customer->last_name }}</td>
-                        <td>{{ $customer->email_address }}</td>
-                        <td>{{ $customer->BusinessPhone }}</td>
-                        <td>{{ $customer->JobTitle }}</td>
-                    </tr>
-                    @endforeach
-                    <!-- Modal -->
-                    <div class="modal fade" id="exampleModal" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog modal-lg">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel">Customer Details</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                    <form method="POST" action="">
-                                        {{-- <input type=""> --}}
-                                        <div class=form-group>
-                                            <label class="control-label">Company</label>
-                                            <div>
-                                                <input type="" class="form-control input-lg" name="company" value="">
-                                            </div>
-                                        </div>
 
-                                    </form>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                    <button type="button" class="btn btn-primary">Save changes</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </tbody>
-            </table>
-            <div class="card-footer">
-                <!-- {{ $customers->withQueryString()->links() }} -->
+<div class="card">
+    <div class="card-header">
+        <h3>Customers Menu</h3>
+
+        <div class="row">
+            <div class="col">
+                <a href="{{ url('/customer/create') }}" class="btn btn-primary"> New Customer</a>
+                <a href="" class="btn btn-primary"> Coolect Data via E-mail</a>
+                <a href="" class="btn btn-primary"> Add From Outlook</a>
+                <a href="" class="btn btn-primary"> E-mail List</a>
+
+                <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                    Edit
+                </a>
+
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                    <li><a class="dropdown-item" href=" {{ url('/customer/{customer}/edit') }}">Update Customer</a></li>
+                    <li><a class="dropdown-item" href="#">Delete Customer</a></li>
+                </ul>
+            </div>
+            <div class="col d-flex justify-content-end">
+                <a href="#" class="btn btn-secondary"> Home</a>
             </div>
         </div>
     </div>
+
+    <div class="card-body">
+
+        @if ($message = Session::get('success'))
+        <div class="alert alert-success">
+
+            <p>{{ $message }}</p>
+
+        </div>
+        @endif
+
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th scope="col"> Id</th>
+                    <th scope="col"> Company</th>
+                    <th scope="col"> First Name</th>
+                    <th scope="col"> Last Name</th>
+                    <th scope="col"> E-mail Address</th>
+                    <th scope="col"> Businees Phone</th>
+                    <th scope="col"> Job Title</th>
+                    <th scope="col"> Address</th>
+                    <th scope="col"> Web Page</th>
+                    <th scope="col"> Notes</th>
+                    
+
+                </tr>
+            </thead>
+
+            <tbody>
+                @foreach( $customers as $customer)
+                <tr>
+                    <td> {{ $customer -> id}}</td>
+                    <td> {{ $customer -> company}}</td>
+                    <td> {{ $customer -> first_name}}</td>
+                    <td> {{ $customer -> last_name}} </td>
+                    <td> {{ $customer -> email_address}}</td>
+                    <td> {{ $customer -> business_phone}}</td>
+                    <td> {{ $customer -> job_title}}</td>
+                    <td> {{ $customer -> address}},{{ $customer -> city}},{{ $customer -> state}},
+                         {{ $customer -> postal_code}},{{ $customer -> country}} </td>
+                    <td> {{ $customer -> web_page}}</td>
+                    <td> {{ $customer -> notes}}</td>
+
+                    
+                </tr>
+                @endforeach
+            </tbody>
+
+        </table>
+    </div>
 </div>
+
+
+
+
+
+
 @endsection

@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.main.app')
 
 @section('content')
 <div class="card">
@@ -16,6 +16,7 @@
             <a class="btn btn-primary" href="{{ url('/orders') }}">Orders</a>
             <a class="btn btn-primary" href=" {{ url('/purchase')}} ">Purchase Orders</a>
             <a class="btn btn-primary" href=" {{ url('/employee') }}">Employees</a>
+            <a class="btn btn-primary" href=" {{ url('/customer') }}">customer</a>
             <!-- <a type="button" class="btn btn-primary">Supplier</a> -->
 
         </div>
