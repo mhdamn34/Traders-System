@@ -4,11 +4,10 @@
 
 <div class="card">
     <div class="card-header">
-        <h3>Customers Menu</h3>
-
+        <h3>Supplier List</h3>
         <div class="row">
             <div class="col">
-                <a href="{{ url('/customer/create') }}" class="btn btn-primary"> New Customer</a>
+                <a href="{{ route('supplier.create') }}" class="btn btn-primary">New Supplier</a>
                 <a href="" class="btn btn-primary"> Collect Data via E-mail</a>
                 <a href="" class="btn btn-primary"> Add From Outlook</a>
                 <a href="" class="btn btn-primary"> E-mail List</a>
@@ -19,12 +18,10 @@
         </div>
     </div>
     <div class="card-body">
-
+        
         @if ($message = Session::get('success'))
         <div class="alert alert-success">
-
             <p>{{ $message }}</p>
-
         </div>
         @endif
 
@@ -42,37 +39,31 @@
                     <th scope="col"> Web Page</th>
                     <th scope="col"> Notes</th>
                     <th scope="col" width="180px"> Action</th>
-
-
                 </tr>
             </thead>
-
             <tbody>
-                @foreach( $customers as $customer)
+                @foreach( $suppliers as $supplier)
                 <tr>
-                    <td> {{ $customer -> id}}</td>
-                    <td> {{ $customer -> company}}</td>
-                    <td> {{ $customer -> first_name}}</td>
-                    <td> {{ $customer -> last_name}} </td>
-                    <td> {{ $customer -> email_address}}</td>
-                    <td> {{ $customer -> business_phone}}</td>
-                    <td> {{ $customer -> job_title}}</td>
-                    <td> {{ $customer -> address}},{{ $customer -> city}},{{ $customer -> state}},
-                        {{ $customer -> postal_code}}, {{ $customer -> country}}
+                    <td> {{ $supplier -> id}}</td>
+                    <td> {{ $supplier -> company}}</td>
+                    <td> {{ $supplier -> first_name}}</td>
+                    <td> {{ $supplier -> last_name}} </td>
+                    <td> {{ $supplier -> email_address}}</td>
+                    <td> {{ $supplier -> business_phone}}</td>
+                    <td> {{ $supplier -> job_title}}</td>
+                    <td> {{ $supplier -> address}},{{ $supplier -> city}},{{ $supplier -> state}},
+                         {{ $supplier -> postal_code}}, {{ $supplier -> country}}
                     </td>
-                    <td> {{ $customer -> web_page}}</td>
-                    <td> {{ $customer -> notes}}</td>
+                    <td> {{ $supplier -> web_page}}</td>
+                    <td> {{ $supplier -> notes}}</td>
                     <td>
-                        <form action=" {{ route('customer.destroy', $customer->id) }}" method="POST">
-                            <a class="btn btn-primary" href=" {{ route('customer.edit', $customer->id) }} " role="button">Update</a>
-                            
+                        <form action=" {{ route('supplier.destroy', $supplier->id) }}" method="POST">
+                            <a class="btn btn-primary" href=" {{ route('supplier.edit', $supplier->id) }} " role="button">Update</a>
                             @csrf
                             @method('DELETE')
                             <button type="submit" class="btn btn-secondary">Delete</button>
                         </form>
                     </td>
-
-
                 </tr>
                 @endforeach
             </tbody>

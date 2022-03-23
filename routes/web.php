@@ -20,7 +20,7 @@ Route::get('/', function () {
 });
 
 //HOMEPAGE
-Route::get('/home', function() {
+Route::get('/home', function () {
     return view('homepage');
 });
 
@@ -37,11 +37,17 @@ Route::delete('/products/{product}', 'ProductController@destroy')->name('product
 
 
 //ROUTE SUPPLIER
-Route::get('/suppliers', 'SupplierController@index')->name('suppliers.index');
-Route::post('/suppliers', 'SupplierController@store')->name('suppliers.store');
-// Route::get('/newSupplier','SupplierController@create');
-Route::get('/newSupplier', function() {
-    return view('suppliers.createSupplier');
+Route::group([
+    'prefix' => 'supplier',
+    'as' => 'supplier.'
+], function () {
+    Route::get('/', 'SupplierController@index')->name('index');
+    Route::get('/create', 'SupplierController@create')->name('create');
+    Route::post('/', 'SupplierController@store')->name('store');
+    Route::get('/{supplier}', 'SupplierController@show')->name('show');
+    Route::get('/{supplier}/edit', 'SupplierController@edit')->name('edit');
+    Route::patch('/{supplier}', 'SupplierController@update')->name('update');
+    Route::delete('/{supplier}', 'SupplierController@destroy')->name('destroy');
 });
 
 
@@ -52,16 +58,16 @@ Route::get('/employee', 'EmployeeController@index')->name('employees.index');
 //     return view('employees.employeesHome');
 // });
 // Route::get('/createEmployee', 'EmployeeController@create')->name('employees.create');
-Route::get('/createEmployee', function() {
+Route::get('/createEmployee', function () {
     return view('employees.createEmployee');
 });
 
 
 //PURCHASE ORDERS
-Route::get('/purchase', function() {
+Route::get('/purchase', function () {
     return view('purchaseOrders.purchaseHome');
 });
-Route::get('/createPurchase', function() {
+Route::get('/createPurchase', function () {
     return view('purchaseOrders.createPurchase');
 });
 
@@ -78,33 +84,33 @@ Route::resource('/categories', 'CategoriesController');
 // });
 Route::get('/shippers', 'ShipperController@index');
 
-Route::get('/NewShippers', function() {
+Route::get('/NewShippers', function () {
     return view('shippers.newShipper');
 });
 
-Route::get('/ListShippers', function() {
+Route::get('/ListShippers', function () {
     return view('shippers.collectData');
 });
 
 
 
 //Route Sales
-Route::get('/SalesReport', function() {
+Route::get('/SalesReport', function () {
     return view('sales.salesreport');
 });
 
 
 
 //Route Inventory
-Route::get('/InventoryHome', function() {
+Route::get('/InventoryHome', function () {
     return view('InventoryHome.viewInventory');
 });
 
-Route::get('/addproduct', function() {
+Route::get('/addproduct', function () {
     return view('InventoryHome.AddProduct');
 });
 
-Route::get('/purchasehistory', function() {
+Route::get('/purchasehistory', function () {
     return view('InventoryHome.orderandpurchasehistory');
 });
 
@@ -118,15 +124,15 @@ Route::get('/purchasehistory', function() {
 Route::get('/orders', 'OrderController@index');
 // Route::get('/neworder', 'OrderController@index');
 
-Route::get('/neworder', function() {
+Route::get('/neworder', function () {
     return view('Orders.addNewOrder');
 });
 
-Route::get('/ListShippers', function() {
+Route::get('/ListShippers', function () {
     return view('shippers.collectData');
 });
 
-Route::get('/createpurchase', function() {
+Route::get('/createpurchase', function () {
     return view('purchaseOrders.createPurchase');
 });
 

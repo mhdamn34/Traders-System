@@ -11,7 +11,7 @@
         <div class="btn-group" role="group" aria-label="Basic example">
             <!-- <a class="btn btn-primary" href="#">Home</a> -->
             
-            <a class="btn btn-primary" href=" {{ url('/suppliers') }} ">Supplier</a>
+            <a class="btn btn-primary" href=" {{ url('/supplier') }} ">Supplier</a>
             <a class="btn btn-primary" href="{{ url('/shippers') }}">Shipper</a>
             <a class="btn btn-primary" href="{{ url('/orders') }}">Orders</a>
             <a class="btn btn-primary" href=" {{ url('/purchase')}} ">Purchase Orders</a>

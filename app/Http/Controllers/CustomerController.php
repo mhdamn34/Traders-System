@@ -50,7 +50,8 @@ class CustomerController extends Controller
         $customer->notes = $request->notes;
         $customer->save();
 
-        return redirect()->route('customer.index');
+        return redirect()->route('customer.index')
+        ->with('success', 'Supplier created successfully.');;
     }
 
     public function show(Customer $customer) {

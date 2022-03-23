@@ -3,16 +3,15 @@
 @section('content')
 
 <div class="card">
-
     <div class="card-header">
-        <h5>Untitled</h5>
+        <h5>Create New Customer</h5>
         <div class="row">
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item active">
                             <a class="nav-link" href="#" id="gotoId">Go To <span class="sr-only"></span></a>
-                        <li class="nav-item active">
+                        <li class="nav-item active" style="padding-top: 8px;">
                             <div class="input-group mb-3">
                                 <select class="form-select" id="gotoId">
                                     <option selected>Choose...</option>
@@ -30,7 +29,7 @@
                             <a class="nav-link" href="#">Create Outlook Contact</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Save and New</a>
+                            <a class="nav-link" href="#">New</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href=" {{ url('/customer') }} ">Close</a>
@@ -142,31 +141,36 @@
                     </div>
                 </div>
                 <div class="col">
-                    <div class="row mb-3">
-                        <label for="email" class="col-sm-2 col-form-label">Email</label>
-                        <div class="col-sm-10">
-                            <input type="text" name="email_address" class="form-control" id="email">
+                    <div class="col">
+                        <div class="row">
+                            <div class="row mb-5">
+                                <!-- <label for="img" class="col-sm-2 col-form-label">Image</label> -->
+                                <div class="col-xs-12 col-sm-12 col-md-12">
+                                    <img src="{{ asset('dist/img/avatar.png') }}" class="img-thumbnail" style="width: 200px; height: 200px;" alt="...">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="row mb-3">
+                                    <label for="email" class="col-sm-2 col-form-label">Email</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" name="email_address" class="form-control" id="email">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <label for="web" class="col-sm-2 col-form-label">Web Page</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" name="web_page" class="form-control" id="web">
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="row mb-3">
-                        <label for="web" class="col-sm-2 col-form-label">Web Page</label>
-                        <div class="col-sm-10">
-                            <input type="text" name="web_page" class="form-control" id="web">
-                        </div>
-                    </div>
-                    <div class="row mb-3">
+                    <div class="input-group">
                         <label for="notes" class="col-sm-2 col-form-label">Notes</label>
-                        <div class="col-sm-10">
-                            <input type="text" name="notes" class="form-control" id="notes">
-                        </div>
-                    </div>
-                    <div class="row mb-3">
-                        <label for="img" class="col-sm-2 col-form-label">Image</label>
-                        <div class="col-sm-10">
-                            <input type="file" class="form-control" id="img">
-                        </div>
+                        <textarea type="text" name="notes" class="form-control" aria-label="With textarea"></textarea>
                     </div>
                 </div>
+
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12 text-center">
                 <button type="submit" class="btn btn-primary"> Save</button>
