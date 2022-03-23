@@ -12,18 +12,9 @@
                 <a href="" class="btn btn-primary"> Coolect Data via E-mail</a>
                 <a href="" class="btn btn-primary"> Add From Outlook</a>
                 <a href="" class="btn btn-primary"> E-mail List</a>
-
-                <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
-                    Edit
-                </a>
-
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                    <li><a class="dropdown-item" href=" {{ url('/customer/{customer}/edit') }}">Update Customer</a></li>
-                    <li><a class="dropdown-item" href="#">Delete Customer</a></li>
-                </ul>
             </div>
             <div class="col d-flex justify-content-end">
-                <a href="#" class="btn btn-secondary"> Home</a>
+                <a href=" {{ url('/home') }} " class="btn btn-secondary">Home</a>
             </div>
         </div>
     </div>
@@ -51,7 +42,8 @@
                     <th scope="col"> Address</th>
                     <th scope="col"> Web Page</th>
                     <th scope="col"> Notes</th>
-                    
+                    <th scope="col"> Action</th>
+
 
                 </tr>
             </thead>
@@ -67,11 +59,21 @@
                     <td> {{ $customer -> business_phone}}</td>
                     <td> {{ $customer -> job_title}}</td>
                     <td> {{ $customer -> address}},{{ $customer -> city}},{{ $customer -> state}},
-                         {{ $customer -> postal_code}},{{ $customer -> country}} </td>
+                        {{ $customer -> postal_code}}, {{ $customer -> country}}
+                    </td>
                     <td> {{ $customer -> web_page}}</td>
                     <td> {{ $customer -> notes}}</td>
+                    <td>
+                        <form action=" {{ route('customer.destroy', $customer->id) }}" method="POST">
+                            <a class="btn btn-primary" href=" {{ route('customer.edit', $customer->id) }} " role="button">Update</a>
+                            
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" class="btn btn-secondary">Delete</button>
+                        </form>
+                    </td>
 
-                    
+
                 </tr>
                 @endforeach
             </tbody>

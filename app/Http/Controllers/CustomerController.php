@@ -58,7 +58,7 @@ class CustomerController extends Controller
     }
 
     public function edit(Customer $customer) {
-        return view('customers.show', compact('customer'));
+        return view('customers.edit', compact('customer'));
     }
 
     public function update(Request $request, Customer $customer) {
@@ -81,7 +81,7 @@ class CustomerController extends Controller
         $customer->notes = $request->notes;
         $customer->save();
 
-        return redirect()->route('customer.show', compact('customer'));
+        return redirect()->route('customer.index', compact('customer'));
     }
 
     public function destroy(Customer $customer) {
