@@ -51,7 +51,7 @@ class CustomerController extends Controller
         $customer->save();
 
         return redirect()->route('customer.index')
-        ->with('success', 'Supplier created successfully.');;
+        ->with('success', 'Supplier created successfully.');
     }
 
     public function show(Customer $customer) {
@@ -82,7 +82,8 @@ class CustomerController extends Controller
         $customer->notes = $request->notes;
         $customer->save();
 
-        return redirect()->route('customer.index', compact('customer'));
+        return redirect()->route('customer.index', compact('customer'))
+        ->with('success', 'Customer update successfully');
     }
 
     public function destroy(Customer $customer) {

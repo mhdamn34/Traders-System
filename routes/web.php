@@ -15,12 +15,12 @@ use PhpParser\Node\Expr\FuncCall;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/home', function () {
+//     return view('welcome');
+// });
 
 //HOMEPAGE
-Route::get('/home', function () {
+Route::get('/', function () {
     return view('homepage');
 });
 

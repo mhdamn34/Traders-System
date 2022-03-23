@@ -58,16 +58,42 @@ class SupplierController extends Controller
 
     }
 
-    public function show(){
+    public function edit(Supplier $supplier){
+        return view('suppliers.edit', compact('supplier'));
+    }
+
+    public function show(Supplier $supplier){
+        return view('suppliers.show', compact('supplier'));
+    }
+
+    public function update(Request $request, Supplier $supplier){
+
+        $supplier->company = $request->company;
+        $supplier->first_name = $request->first_name;
+        $supplier->last_name = $request->last_name;       
+        $supplier->email_address = $request->email_address;
+        $supplier->job_title = $request->job_title;
+        $supplier->business_phone = $request->business_phone;
+        $supplier->home_phone = $request->home_phone;
+        $supplier->mobile_phone = $request->mobile_phone;
+        $supplier->fax_number = $request->fax_number;
+        $supplier->address = $request->address;
+        $supplier->city = $request->city;
+        $supplier->state = $request->state;
+        $supplier->postal_code = $request->postal_code;
+        $supplier->country = $request->country;
+        $supplier->web_page = $request->web_page;
+        $supplier->notes = $request->notes;
+        $supplier->save();
+
+        return redirect()->route('supplier.index',compact('supplier'))
+        ->with('success','Supplier update successfully');
 
     }
 
-    public function update(){
-
-    }
-
-    public function destroy(){
-
+    public function destroy(Supplier $supplier){
+            $supplier->delete();
+            return redirect()->route('supplier.index');
     }
 
 }

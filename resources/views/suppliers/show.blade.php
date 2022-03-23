@@ -4,11 +4,10 @@
 
 <div class="card">
     <div class="card-header">
-        <h3>Customers Menu</h3>
-
+        <h3>Supplier List</h3>
         <div class="row">
             <div class="col d-flex justify-content-end">
-                <a href=" {{ route('customer.index') }} " class="btn btn-secondary"> Back</a>
+                <a href=" {{ route('supplier.index') }} " class="btn btn-secondary">Back</a>
             </div>
         </div>
     </div>
@@ -25,28 +24,24 @@
                     <th scope="col"> Job Title</th>
                     <th scope="col"> Address</th>
                     <th scope="col"> Web Page</th>
-                    <th scope="col"> Notes</th>
-                    
+                    <th scope="col" width="200px"> Notes</th>
                 </tr>
             </thead>
-
             <tbody>
-                
                 <tr>
-                    <td> {{ $customer -> id}}</td>
-                    <td> {{ $customer -> company}}</td>
-                    <td> {{ $customer -> first_name}}</td>
-                    <td> {{ $customer -> last_name}} </td>
-                    <td> {{ $customer -> email_address}}</td>
-                    <td> {{ $customer -> business_phone}}</td>
-                    <td> {{ $customer -> job_title}}</td>
-                    <td> {{ $customer -> address}},{{ $customer -> city}},{{ $customer -> state}},
-                         {{ $customer -> postal_code}}, {{ $customer -> country}}
+                    <td> {{ $supplier -> id}}</td>
+                    <td> {{ $supplier -> company}}</td>
+                    <td> {{ $supplier -> first_name}}</td>
+                    <td> {{ $supplier -> last_name}} </td>
+                    <td> {{ $supplier -> email_address}}</td>
+                    <td> {{ $supplier -> business_phone}}</td>
+                    <td> {{ $supplier -> job_title}}</td>
+                    <td> {{ $supplier -> address}},{{ $supplier -> city}},{{ $supplier -> state}},
+                        {{ $supplier -> postal_code}}, {{ $supplier -> country}}
                     </td>
-                    <td> {{ $customer -> web_page}}</td>
-                    <td> {{ $customer -> notes}}</td>
+                    <td> {{ $supplier -> web_page}}</td>
+                    <td> {{ $supplier -> notes}}</td>
                 </tr>
-                
             </tbody>
         </table>
     </div>

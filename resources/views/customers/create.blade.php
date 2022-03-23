@@ -143,21 +143,20 @@
                     <div class="col">
                         <div class="row">
                             <div class="row mb-5">
-                                <!-- <label for="img" class="col-sm-2 col-form-label">Image</label> -->
                                 <div class="col-xs-12 col-sm-12 col-md-12">
                                     <img src="{{ asset('dist/img/avatar.png') }}" class="img-thumbnail" style="width: 200px; height: 200px;" alt="...">
                                 </div>
                             </div>
-                            <div class="col">
+                            <div class="col" style="padding: 30px;">
                                 <div class="row mb-3">
-                                    <label for="email" class="col-sm-2 col-form-label">Email</label>
-                                    <div class="col-sm-10">
+                                    <label for="email" class="col-sm-4 col-form-label">Email</label>
+                                    <div class="col-sm-12">
                                         <input type="text" name="email_address" class="form-control" id="email">
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <label for="web" class="col-sm-2 col-form-label">Web Page</label>
-                                    <div class="col-sm-10">
+                                    <label for="web" class="col-sm-4 col-form-label">Web Page</label>
+                                    <div class="col-sm-12">
                                         <input type="text" name="web_page" class="form-control" id="web">
                                     </div>
                                 </div>
@@ -165,8 +164,8 @@
                         </div>
                     </div>
                     <div class="input-group">
-                        <label for="notes" class="col-sm-2 col-form-label">Notes</label>
-                        <textarea type="text" name="notes" class="form-control" aria-label="With textarea"></textarea>
+                        <label for="notes" class="col-sm-2 col-form-label" >Notes</label>
+                        <textarea type="text" name="notes" class="form-control" aria-label="With textarea" style="height: 200px;"></textarea>
                     </div>
                 </div>
 
