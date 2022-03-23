@@ -3,7 +3,6 @@
 @section('content')
 
 <div class="card">
-
     <div class="card-header">
         <h5>Untitled</h5>
         <div class="row">
@@ -40,7 +39,6 @@
             </nav>
         </div>
     </div>
-
     <div class="card-body">
         @if ($errors->any())
         <div class="alert alert-danger">
