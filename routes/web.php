@@ -129,3 +129,16 @@ Route::get('/ListShippers', function() {
 Route::get('/createpurchase', function() {
     return view('purchaseOrders.createPurchase');
 });
+
+Route::group([
+    'prefix'=>'customer',
+    'as'=>'customer.'
+], function() {
+    Route::get('/', 'CustomerController@index')->name('index');
+    Route::get('/create', 'CustomerController@create')->name('create');
+    Route::post('/', 'CustomerController@store')->name('store');
+    Route::get('/{customer}', 'CustomerController@show')->name('show');
+    Route::get('/{customer}/edit', 'CustomerController@edit')->name('edit');
+    Route::patch('/{customer}', 'CustomerController@update')->name('update');
+    Route::delete('/{customer}', 'CustomerController@destroy')->name('destroy');
+});
