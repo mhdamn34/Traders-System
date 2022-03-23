@@ -106,28 +106,21 @@
                     <div class="row mb-3">
                         <label for="businessphone" class="col-sm-3 col-form-label">Business Phone</label>
                         <div class="col-sm-9">
-                            <input type="number" name="class=" form-control" id="business">
+                            <input type="number" name="businessphone" class=" form-control" id="business">
                         </div>
                     </div>
 
                     <div class="row mb-3">
                         <label for="mobilephone" class="col-sm-3 col-form-label">Mobile Phone</label>
                         <div class="col-sm-9">
-                            <input type="number" class="form-control" id="mobile">
+                            <input type="number" name="mobilephone" class="form-control" id="mobile">
                         </div>
                     </div>
 
                     <div class="row mb-3">
                         <label for="fax" class="col-sm-3 col-form-label">Fax Number</label>
                         <div class="col-sm-9">
-                            <input type="number" class="form-control" id="fax">
-                        </div>
-                    </div>
-
-                    <div class="row mb-3">
-                        <label for="fax" class="col-sm-3 col-form-label">Fax Number</label>
-                        <div class="col-sm-9">
-                            <input type="number" class="form-control" id="fax">
+                            <input type="number" name="faxnumber" class="form-control" id="fax">
                         </div>
                     </div>
 
@@ -137,35 +130,35 @@
                     <div class="row mb-3">
                         <label for="street" class="col-sm-3 col-form-label">Street</label>
                         <div class="col-sm-9">
-                            <input type="text" class="form-control" id="street">
+                            <input type="text" name="street" class="form-control" id="street">
                         </div>
                     </div>
 
                     <div class="row mb-3">
                         <label for="city" class="col-sm-3 col-form-label">City</label>
                         <div class="col-sm-9">
-                            <input type="text" class="form-control" id="city">
+                            <input type="text" name="city" class="form-control" id="city">
                         </div>
                     </div>
 
                     <div class="row mb-3">
                         <label for="state" class="col-sm-3 col-form-label">State/Province</label>
                         <div class="col-sm-9">
-                            <input type="text" class="form-control" id="state">
+                            <input type="text" name="state" class="form-control" id="state">
                         </div>
                     </div>
 
                     <div class="row mb-3">
                         <label for="zip" class="col-sm-3 col-form-label">Zip/Postal Code</label>
                         <div class="col-sm-9">
-                            <input type="number" class="form-control" id="zip">
+                            <input type="number" name="zip" class="form-control" id="zip">
                         </div>
                     </div>
 
                     <div class="row mb-3">
                         <label for="country" class="col-sm-4 col-form-label">Country/Region</label>
                         <div class="col-sm-8">
-                            <input type="text" class="form-control" id="country">
+                            <input type="text" name="country" class="form-control" id="country">
                         </div>
                     </div>
             </div>
@@ -174,33 +167,33 @@
                 <div class="row mb-3">
                     <label for="email" class="col-sm-2 col-form-label">Email</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" id="email">
+                        <input type="text" name="email" class="form-control" id="email">
                     </div>
                 </div>
 
                 <div class="row mb-3">
                     <label for="web" class="col-sm-2 col-form-label">Web Page</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" id="web">
+                        <input type="text" name="web" class="form-control" id="web">
                     </div>
                 </div>
 
                 <div class="row mb-3">
                     <label for="notes" class="col-sm-2 col-form-label">Notes</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" id="notes">
+                        <input type="text" name="notes" class="form-control" id="notes">
                     </div>
                 </div>
 
                 <div class="row mb-3">
                     <label for="img" class="col-sm-2 col-form-label">Image</label>
                     <div class="col-sm-10">
-                        <input type="file" class="form-control" id="img">
+                        <input type="file" name="image" class="form-control" id="img">
                     </div>
                 </div>
 
             </div>
-        </div>
+         </div>
         </form>
     </div>
 

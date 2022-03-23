@@ -9,15 +9,17 @@ use Illuminate\Http\Request;
 class ShipperController extends Controller
 {
     //
-    public function index(){
-
+    public function index()
+    {
         $shippers=Shipper::all();
         return view('shippers.shippersHome',compact('shippers'));
     }
 
-    public function create(){
-
+    public function create()
+    {
         return view('shippers.newShipper');
+
+        
     }
-    
+   
 }
