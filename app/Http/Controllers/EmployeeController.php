@@ -64,9 +64,9 @@ class EmployeeController extends Controller
     }
 
     public function show(Employee $employee){
-        $employees=Employee::all();
+        // $employees=Employee::all();
         // dd($employees);
-            return view('employees.show',compact('employees'));
+            return view('employees.show',compact('employee'));
     }
 
     public function edit(Employee $employee){

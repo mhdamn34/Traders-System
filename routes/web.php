@@ -59,7 +59,7 @@ Route::get('/employee', 'EmployeeController@index')->name('employees.employeesHo
 // });
 // Route::get('employee/createEmployee', 'EmployeeController@create')->name('employees.create');
 Route::get('/createEmployee', 'EmployeeController@create')->name('employees.createEmployee');
-Route::get('/employee/show', 'EmployeeController@show')->name('employee.show');
+Route::get('/{employee}/show', 'EmployeeController@show')->name('employee.show');
 Route::post('/employee', 'EmployeeController@store')->name('employee.store');
 Route::get('/{employee}/edit', 'EmployeeController@edit')->name('employees.edit');
 Route::patch('/employee/{employee}', 'EmployeeController@update')->name('employees.update');

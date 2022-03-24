@@ -31,7 +31,7 @@
             </thead>
 
             <tbody>
-                @foreach($employees as $employee)
+                
                 <tr>
                     <td> {{ $employee -> id}}</td>
                     <td> {{ $employee -> company}}</td>
@@ -46,7 +46,7 @@
                     <td> {{ $employee -> web_page}}</td>
                     <td> {{ $employee -> notes}}</td>
                 </tr>
-                @endforeach
+              
             </tbody>
         </table>
     </div>
