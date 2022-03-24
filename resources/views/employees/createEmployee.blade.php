@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.main.app')
 
 @section('content')
 
@@ -34,11 +34,25 @@
                             <a class="nav-link" href="#">Save and New</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href=" {{ url('/employeesHome') }} ">Close</a>
+                        <a href=" {{ url('/employee') }} " class="btn btn-secondary">Close</a>
                         </li>
                     </ul>
                 </div>
             </nav>
+            <thead>
+                
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">General</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Order</a>
+            </li>
+
+        </ul>
+
+
+    </thead>
 
             <!-- Modal -->
             <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -79,8 +93,7 @@
 
 
     <div class="card-body">
-        <!-- @if ($errors->any())
-
+        @if ($errors->any())
         <div class="alert alert-danger">
             <strong>Whoops!</strong> There were some problems with your input.<br><br>
             <ul>
@@ -89,184 +102,127 @@
                 @endforeach
             </ul>
         </div>
-
-        @endif -->
-        <ul class="nav nav-tabs" id="myTab" role="tablist">
-            <li class="nav-item" role="presentation">
-                <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#general" type="button" role="tab" aria-controls="home" aria-selected="true">General </button>
-            </li>
-            <li class="nav-item" role="presentation">
-                <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#orders" type="button" role="tab" aria-controls="profile" aria-selected="false">Order </button>
-            </li>
-        </ul>
-        <div class="tab-content" id="myTabContent">
-            <div class="tab-pane fade show active" id="general" role="tabpanel" aria-labelledby="home-tab">
-
-                <div class="card-body">
-                    <div class="row">
-                        <div class="col">
-                            <form>
-                                <div class="row mb-3">
-                                    <label for="company" class="col-sm-3 col-form-label">Company</label>
-                                    <div class="col-sm-9">
-                                        <input type="text" name="company" class="form-control" id="company">
-                                    </div>
-                                </div>
-
-                                <br>
-                                <h5>Primary Contact</h5>
-
-                                <div class="row mb-3">
-                                    <label for="firstname" class="col-sm-3 col-form-label">First Name</label>
-                                    <div class="col-sm-9">
-                                        <input type="text" name="firstname" class="form-control" id="firstname">
-                                    </div>
-                                </div>
-
-                                <div class="row mb-3">
-                                    <label for="lastname" class="col-sm-3 col-form-label">Last Name</label>
-                                    <div class="col-sm-9">
-                                        <input type="text" name="lastname" class="form-control" id="lastname">
-                                    </div>
-                                </div>
-
-                                <div class="row mb-3">
-                                    <label for="job" class="col-sm-3 col-form-label">Job Title</label>
-                                    <div class="col-sm-9">
-                                        <input type="text" name="job" class="form-control" id="job">
-                                    </div>
-                                </div>
-
-                                <br>
-                                <h5>Phone Numbers</h5>
-
-                                <div class="row mb-3">
-                                    <label for="businessphone" class="col-sm-3 col-form-label">Business Phone</label>
-                                    <div class="col-sm-9">
-                                        <input type="number" name="class=" form-control" id="business">
-                                    </div>
-                                </div>
-
-                                <div class="row mb-3">
-                                    <label for="mobilephone" class="col-sm-3 col-form-label">Mobile Phone</label>
-                                    <div class="col-sm-9">
-                                        <input type="number" class="form-control" id="mobile">
-                                    </div>
-                                </div>
-
-                                <div class="row mb-3">
-                                    <label for="fax" class="col-sm-3 col-form-label">Fax Number</label>
-                                    <div class="col-sm-9">
-                                        <input type="number" class="form-control" id="fax">
-                                    </div>
-                                </div>
-
-                                <div class="row mb-3">
-                                    <label for="fax" class="col-sm-3 col-form-label">Fax Number</label>
-                                    <div class="col-sm-9">
-                                        <input type="number" class="form-control" id="fax">
-                                    </div>
-                                </div>
-
-                                <br>
-                                <h5>Address</h5>
-
-                                <div class="row mb-3">
-                                    <label for="street" class="col-sm-3 col-form-label">Street</label>
-                                    <div class="col-sm-9">
-                                        <input type="text" class="form-control" id="street">
-                                    </div>
-                                </div>
-
-                                <div class="row mb-3">
-                                    <label for="city" class="col-sm-3 col-form-label">City</label>
-                                    <div class="col-sm-9">
-                                        <input type="text" class="form-control" id="city">
-                                    </div>
-                                </div>
-
-                                <div class="row mb-3">
-                                    <label for="state" class="col-sm-3 col-form-label">State/Province</label>
-                                    <div class="col-sm-9">
-                                        <input type="text" class="form-control" id="state">
-                                    </div>
-                                </div>
-
-                                <div class="row mb-3">
-                                    <label for="zip" class="col-sm-3 col-form-label">Zip/Postal Code</label>
-                                    <div class="col-sm-9">
-                                        <input type="number" class="form-control" id="zip">
-                                    </div>
-                                </div>
-
-                                <div class="row mb-3">
-                                    <label for="country" class="col-sm-4 col-form-label">Country/Region</label>
-                                    <div class="col-sm-8">
-                                        <input type="text" class="form-control" id="country">
-                                    </div>
-                                </div>
-                        </div>
-
-                        <div class="col">
-                            <div class="row mb-3">
-                                <label for="email" class="col-sm-2 col-form-label">Email</label>
-                                <div class="col-sm-10">
-                                    <input type="text" class="form-control" id="email">
-                                </div>
-                            </div>
-
-                            <div class="row mb-3">
-                                <label for="web" class="col-sm-2 col-form-label">Web Page</label>
-                                <div class="col-sm-10">
-                                    <input type="text" class="form-control" id="web">
-                                </div>
-                            </div>
-
-                            <div class="row mb-3">
-                                <label for="notes" class="col-sm-2 col-form-label">Notes</label>
-                                <div class="col-sm-10">
-                                    <input type="text" class="form-control" id="notes">
-                                </div>
-                            </div>
-
-                            <div class="row mb-3">
-                                <label for="img" class="col-sm-2 col-form-label">Image</label>
-                                <div class="col-sm-10">
-                                    <input type="file" class="form-control" id="img">
-                                </div>
-                            </div>
-
+        @endif
+        <form action=" {{ route('employees.store') }} " method="POST">
+            @csrf
+            <div class="row">
+                <div class="col">
+                    <div class="row mb-3">
+                        <label for="company" class="col-sm-3 col-form-label">Company</label>
+                        <div class="col-sm-9">
+                            <input type="text" name="company" class="form-control" id="company">
                         </div>
                     </div>
-                    </form>
+                    <br>
+                    <h5>Primary Contact</h5>
+                    <div class="row mb-3">
+                        <label for="firstname" class="col-sm-3 col-form-label">First Name</label>
+                        <div class="col-sm-9">
+                            <input type="text" name="first_name" class="form-control" id="firstname">
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <label for="lastname" class="col-sm-3 col-form-label">Last Name</label>
+                        <div class="col-sm-9">
+                            <input type="text" name="last_name" class="form-control" id="lastname">
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <label for="job" class="col-sm-3 col-form-label">Job Title</label>
+                        <div class="col-sm-9">
+                            <input type="text" name="job_title" class="form-control" id="jobTitle">
+                        </div>
+                    </div>
+                    <br>
+                    <h5>Phone Numbers</h5>
+                    <div class="row mb-3">
+                        <label for="businessphone" class="col-sm-3 col-form-label">Business Phone</label>
+                        <div class="col-sm-9">
+                            <input type="text" name="business_phone" class="form-control" id="business">
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <label for="mobilephone" class="col-sm-3 col-form-label">Home Phone</label>
+                        <div class="col-sm-9">
+                            <input type="text" name="home_phone" class="form-control" id="mobile">
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <label for="mobilephone" class="col-sm-3 col-form-label">Mobile Phone</label>
+                        <div class="col-sm-9">
+                            <input type="text" name="mobile_phone" class="form-control" id="mobile">
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <label for="fax" class="col-sm-3 col-form-label">Fax Number</label>
+                        <div class="col-sm-9">
+                            <input type="text" name="fax_number" class="form-control" id="fax">
+                        </div>
+                    </div>
+                    <br>
+                    <h5>Address</h5>
+                    <div class="row mb-3">
+                        <label for="street" class="col-sm-3 col-form-label"> Address</label>
+                        <div class="col-sm-9">
+                            <input type="text" name="address" class="form-control" id="street">
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <label for="city" class="col-sm-3 col-form-label">City</label>
+                        <div class="col-sm-9">
+                            <input type="text" name="city" class="form-control" id="city">
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <label for="state" class="col-sm-3 col-form-label">State/Province</label>
+                        <div class="col-sm-9">
+                            <input type="text" name="state" class="form-control" id="state">
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <label for="zip" class="col-sm-3 col-form-label">Zip/Postal Code</label>
+                        <div class="col-sm-9">
+                            <input type="text" name="postal_code" class="form-control" id="zip">
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <label for="country" class="col-sm-3 col-form-label">Country/Region</label>
+                        <div class="col-sm-8">
+                            <input type="text" name="country" class="form-control" id="country">
+                        </div>
+                    </div>
                 </div>
-
+                <div class="col">
+                    <div class="row mb-3">
+                        <label for="email" class="col-sm-2 col-form-label">Email</label>
+                        <div class="col-sm-10">
+                            <input type="text" name="email_address" class="form-control" id="email">
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <label for="web" class="col-sm-2 col-form-label">Web Page</label>
+                        <div class="col-sm-10">
+                            <input type="text" name="web_page" class="form-control" id="web">
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <label for="notes" class="col-sm-2 col-form-label">Notes</label>
+                        <div class="col-sm-10">
+                            <input type="text" name="notes" class="form-control" id="notes">
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <label for="img" class="col-sm-2 col-form-label">Image</label>
+                        <div class="col-sm-10">
+                            <input type="file" class="form-control" id="img">
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="tab-pane fade" id="Orders" role="tabpanel" aria-labelledby="profile-tab">
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th scope="col"> Order #</th>
-                            <th scope="col"> Order Date</th>
-                            <th scope="col"> Customer </th>
-                            <th scope="col"> Invoice Total</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                    </tbody>
-                </table>
+            <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+                <button type="submit" class="btn btn-primary"> Save</button>
             </div>
-
-        </div>
-
-
-
+        </form>
     </div>
 
 

@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.main.app')
 
 @section('content')
 
@@ -54,6 +54,7 @@
                 <th scope="col">Home Phone</th>
                 <th scope="col">Address</th>
                 <th scope="col">City</th>
+                <!-- <th scope="col"> Action</th> -->
 
             </tr>
 
@@ -61,17 +62,17 @@
             @foreach($employees as $employee)
 
             <tr>
-                <td scope="row">{{ $employee->ID }} </td>
-                <td> {{ $employee->Company}}</td>
-                <td> {{ $employee->FirstName}} </td>
-                <td> {{ $employee->LastName}}</td>
-                <td> {{ $employee->EmailAddress}}</td>
-                <td> {{ $employee->JobTitle}}</td>
-                <td> {{ $employee->BussinessPhone}}</td>
-                <td> {{ $employee->HomePhone}}</td>
-                <td> {{ $employee->Address}}</td>
-                <td> {{ $employee->City}}</td>
-                
+            <td scope="row">{{ $employee->id }} </td>
+                <td> {{ $employee->company}}</td>
+                <td> {{ $employee->first_name}} </td>
+                <td> {{ $employee->last_name}}</td>
+                <td> {{ $employee->email_address}}</td>
+                <td> {{ $employee->job_title}}</td>
+                <td> {{ $employee->business_phone}}</td>
+                <td> {{ $employee->home_phone}}</td>
+                <td> {{ $employee->address}}</td>
+                <td> {{ $employee->city}}</td>
+               
             </tr>
             @endforeach
 

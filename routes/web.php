@@ -53,14 +53,34 @@ Route::group([
 
 
 //ROUTE EMPLOYEE
-Route::get('/employee', 'EmployeeController@index')->name('employees.index');
+Route::get('/employee', 'EmployeeController@index')->name('employees.employeesHome');
 // Route::get('/employee', function() {
 //     return view('employees.employeesHome');
 // });
 // Route::get('/createEmployee', 'EmployeeController@create')->name('employees.create');
-Route::get('/createEmployee', function () {
-    return view('employees.createEmployee');
-});
+Route::get('/createEmployee', 'EmployeeController@create')->name('employees.createEmployee');
+// Route::get('/createEmployee', 'EmployeeController@show')->name('employees.show');
+// Route::post('/createEmployee', 'EmployeeController@store')->name('employees.store');
+// Route::get('/createEmployee', 'EmployeeController@edit')->name('employees.edit');
+// Route::patch('/createEmployee', 'EmployeeController@update')->name('employees.update');
+// Route::get('/{employee}', 'EmployeeController@destroy')->name('employees.destroy');
+
+// Route::get('/createEmployee', function() {
+//     return view('employees.createEmployee');
+// });
+
+// Route::group([
+//     'prefix'=>'employee',
+//     'as'=>'employee.'
+// ], function() {
+//     Route::get('/', 'EmployeeController@index')->name('index');
+//     Route::get('/create', 'CustomerController@create')->name('create');
+//     Route::post('/', 'CustomerController@store')->name('store');
+//     Route::get('/{customer}', 'CustomerController@show')->name('show');
+//     Route::get('/{customer}/edit', 'CustomerController@edit')->name('edit');
+//     Route::patch('/{customer}', 'CustomerController@update')->name('update');
+//     Route::delete('/{customer}', 'CustomerController@destroy')->name('destroy');
+// });
 
 
 //PURCHASE ORDERS
