@@ -36,6 +36,13 @@
 </div> -->
 <br>
 <div class="card">
+    @if ($message = Session::get('success'))
+    <div class="alert alert-success">
+
+        <p>{{ $message }}</p>
+
+    </div>
+    @endif
     <table class="table table-bordered mt-3">
         <thead class="table-primary">
             <tr>
@@ -46,14 +53,31 @@
                 <th scope="col">E-mail Address</th>
                 <th scope="col">Business Phone</th>
                 <th scope="col">Job Title</th>
+                <th scope="col" width="200px"> Action</th>
             </tr>
 
         <tbody>
             @foreach($shippers as $shipper)
 
             <tr>
-                <td>{{$shipper->ID}}</td>
-                <td>{{$shipper->Company}}</td>
+                <td>{{$shipper->id}}</td>
+                <td>{{$shipper->company}}</td>
+                <td>{{$shipper->first_name}}</td>
+                <td>{{$shipper->last_name}}</td>
+                <td>{{$shipper->email_address}}</td>
+                <td>{{$shipper->business_phone}}</td>
+                <td>{{$shipper->job_title}}</td>
+                <td>
+                    <form action=" {{ route('shipper.destroy', $shipper->id) }}" method="POST">
+                        <div class="btn-group" role="group" aria-label="Basic example">
+                            <a class="btn btn-primary" href=" {{ route('shipper.edit', $shipper->id) }} " role="button">Update</a>
+                            <a class="btn btn-info" href=" {{ route('shipper.show', $shipper->id) }} " role="button">View</a>
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" class="btn btn-danger">Delete</button>
+                        </div>
+                    </form>
+                </td>
             </tr>
 
             @endforeach

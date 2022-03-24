@@ -64,5 +64,42 @@ class ShipperController extends Controller
         -> with('Success','Shipper Added Successfully');
     }
 
+    public function show(Shipper $shipper) {
+        return view('shippers.show', compact('shipper'));
+    }
+
+    public function edit(Shipper $shipper) {
+        return view('shippers.edit', compact('shipper'));
+    }
+
+    public function update(Request $request, Shipper $shipper) {
+
+        $shipper->company = $request->company;
+        $shipper->first_name = $request->first_name;
+        $shipper->last_name = $request->last_name;       
+        $shipper->email_address = $request->email_address;
+        $shipper->job_title = $request->job_title;
+        $shipper->business_phone = $request->business_phone;
+        $shipper->mobile_phone = $request->mobile_phone;
+        $shipper->fax_number = $request->fax_number;
+        $shipper->address = $request->address;
+        $shipper->city = $request->city;
+        $shipper->state = $request->state;
+        $shipper->postal_code = $request->postal_code;
+        $shipper->country = $request->country;
+        $shipper->web_page = $request->web_page;
+        $shipper->notes = $request->notes;
+        $shipper->save();
+
+        return redirect()->route('shipper.index', compact('shipper'))
+        ->with('success', 'Shipper update successfully');
+    }
+
+    public function destroy(Shipper $shipper) {
+        $shipper->delete();
+        return redirect()->route('shipper.index');
+    }
+
+
    
 }
