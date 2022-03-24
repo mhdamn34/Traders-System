@@ -25,18 +25,31 @@ Route::get('/', function () {
 });
 
 
-// Route::resource('/products', 'ProductController');
-Route::get('/products', 'ProductController@index')->name('products.index');
-Route::get('/products/create', 'ProductController@create')->name('products.create');
-Route::post('/products', 'ProductController@store')->name('product.store');
-Route::get('/products/{product}', 'ProductController@show')->name('products.show');
-Route::get('/products/{product}/edit', 'ProductController@edit')->name('products.edit');
-Route::patch('/products/{product}', 'ProductController@update')->name('products.update');
-Route::delete('/products/{product}', 'ProductController@destroy')->name('products.destroy');
+// ROUTE PRODUCT
+Route::group([
+    'prefix' => 'product',
+    'as' => 'product.'
+], function () {
+    Route::get('/', 'ProductController@index')->name('index');
+    Route::get('/create', 'ProductController@create')->name('create');
+    Route::post('/', 'ProductController@store')->name('store');
+    Route::get('/{product}', 'ProductController@show')->name('show');
+    Route::get('/{product}/edit', 'ProductController@edit')->name('edit');
+    Route::patch('/{product}', 'ProductController@update')->name('update');
+    Route::delete('/{product}', 'ProductController@destroy')->name('destroy');
+});
+
+// Route::get('/products', 'ProductController@index')->name('products.index');
+// Route::get('/products/create', 'ProductController@create')->name('products.create');
+// Route::post('/products', 'ProductController@store')->name('product.store');
+// Route::get('/products/{product}', 'ProductController@show')->name('products.show');
+// Route::get('/products/{product}/edit', 'ProductController@edit')->name('products.edit');
+// Route::patch('/products/{product}', 'ProductController@update')->name('products.update');
+// Route::delete('/products/{product}', 'ProductController@destroy')->name('products.destroy');
 
 
 
-//ROUTE SUPPLIER
+//ROUTE product
 Route::group([
     'prefix' => 'supplier',
     'as' => 'supplier.'

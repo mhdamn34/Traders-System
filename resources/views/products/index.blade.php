@@ -8,7 +8,7 @@
 
         <div class="row">
             <div class="col">
-                <a href="{{ url('/products/create') }}" class="btn btn-primary"> New Product</a>
+                <a href="{{ route ('product.create') }}" class="btn btn-primary"> New Product</a>
                 <a href="" class="btn btn-primary"> Collect Data via E-mail</a>
                 <a href="" class="btn btn-primary"> Add From Outlook</a>
                 <a href="" class="btn btn-primary"> E-mail List</a>
@@ -50,8 +50,8 @@
                     <td>
                         <form action="" method="POST">
                             <div class="btn-group" role="group" aria-label="Basic example">
-                                <a class="btn btn-primary" href=" {{ route('products.edit', $product->id) }} " role="button">Update</a>
-                                <a class="btn btn-info" href=" {{ route('products.show', $product->id) }} " role="button">View</a>
+                                <a class="btn btn-primary" href=" {{ route('product.edit', $product->id) }} " role="button">Update</a>
+                                <a class="btn btn-info" href=" {{ route('product.show', $product->id) }} " role="button">View</a>
                                 @csrf
                                 @method('DELETE')
                                 <button type="submit" class="btn btn-danger">Delete</button>
@@ -65,5 +65,5 @@
     </div>
 </div>
 
-@endsection@extends('layouts.main.app')
+@endsection
 
