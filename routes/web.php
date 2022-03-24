@@ -57,13 +57,13 @@ Route::get('/employee', 'EmployeeController@index')->name('employees.employeesHo
 // Route::get('/employee', function() {
 //     return view('employees.employeesHome');
 // });
-// Route::get('/createEmployee', 'EmployeeController@create')->name('employees.create');
+// Route::get('employee/createEmployee', 'EmployeeController@create')->name('employees.create');
 Route::get('/createEmployee', 'EmployeeController@create')->name('employees.createEmployee');
-// Route::get('/createEmployee', 'EmployeeController@show')->name('employees.show');
-// Route::post('/createEmployee', 'EmployeeController@store')->name('employees.store');
-// Route::get('/createEmployee', 'EmployeeController@edit')->name('employees.edit');
-// Route::patch('/createEmployee', 'EmployeeController@update')->name('employees.update');
-// Route::get('/{employee}', 'EmployeeController@destroy')->name('employees.destroy');
+Route::get('/employee/show', 'EmployeeController@show')->name('employee.show');
+Route::post('/employee', 'EmployeeController@store')->name('employee.store');
+Route::get('/{employee}/edit', 'EmployeeController@edit')->name('employees.edit');
+Route::patch('/employee/{employee}', 'EmployeeController@update')->name('employees.update');
+Route::delete('/employee/{employee}', 'EmployeeController@destroy')->name('employee.destroy');
 
 // Route::get('/createEmployee', function() {
 //     return view('employees.createEmployee');

@@ -54,7 +54,8 @@
                 <th scope="col">Home Phone</th>
                 <th scope="col">Address</th>
                 <th scope="col">City</th>
-                <!-- <th scope="col"> Action</th> -->
+                 <th scope="col"> Action</th>
+                
 
             </tr>
 
@@ -72,6 +73,17 @@
                 <td> {{ $employee->home_phone}}</td>
                 <td> {{ $employee->address}}</td>
                 <td> {{ $employee->city}}</td>
+                <td> 
+                <form action=" {{ route('employee.destroy', $employee->id) }}" method="POST">
+                            <div class="btn-group" role="group" aria-label="Basic example">
+                                <a class="btn btn-primary" href=" {{ route('employees.edit', $employee->id) }} " role="button">Update</a>
+                                <a class="btn btn-info" href=" {{ route('employee.show', $employee->id) }} " role="button">View</a>
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="btn btn-danger">Delete</button>
+                            </div>
+                        </form>
+                    </td>
                
             </tr>
             @endforeach

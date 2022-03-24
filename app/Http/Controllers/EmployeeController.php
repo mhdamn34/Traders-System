@@ -64,11 +64,14 @@ class EmployeeController extends Controller
     }
 
     public function show(Employee $employee){
-            return view('employee.show',compact('employee'));
+        $employees=Employee::all();
+        // dd($employees);
+            return view('employees.show',compact('employees'));
     }
 
     public function edit(Employee $employee){
-        return view('employee.edit', compact('employee'));
+        
+        return view('employees.edit', compact('employee'));
 
     }
 
@@ -81,9 +84,11 @@ class EmployeeController extends Controller
         $Employee->email_address = $request->email_address;
         $Employee->business_phone = $request->business_phone;
         $Employee->mobile_phone = $request->mobile_phone;
+        $Employee->job_title = $request->job_title;
         $Employee->fax_number = $request->fax_number;
         $Employee->address = $request->address;
         $Employee->city = $request->city;
+        $Employee->home_phone = $request->home_phone;
         $Employee->state = $request->state;
         $Employee->postal_code = $request->postal_code;
         $Employee->country = $request->country;
@@ -98,7 +103,7 @@ class EmployeeController extends Controller
     public function destroy(Employee $employee){
 
          $employee->delete();
-        return redirect()->route('employee.index');
+        return redirect()->route('employees.employeesHome');
     }
 
     
