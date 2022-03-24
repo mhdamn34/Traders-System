@@ -4,103 +4,91 @@
 
 <div class="card">
     <div class="card-header">
-        <div class="row">
-            <div class="col-lg-12 margin-tb">
-                <div class="pull-right">
-                    <h2>Add New Product</h2>
-                </div>
-            </div>
-        </div>
+        <h5> Add New Product</h5>
     </div>
-
-
-
-    @if ($errors->any())
-
-    <div class="alert alert-danger">
-        <strong>Whoops!</strong> There were some problems with your input.<br><br>
-        <ul>
-            @foreach ($errors->all() as $error)
-            <li>{{ $error }}</li>
-            @endforeach
-        </ul>
-    </div>
-
-    @endif
-
-
     <div class="card-body">
-
-        <form action="{{ route('products.store') }}" method="POST">
+        @if ($errors->any())
+        <div class="alert alert-danger">
+            <strong>Whoops!</strong> There were some problems with your input.<br><br>
+            <ul>
+                @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+        @endif
+        <form action="" method="POST">
             @csrf
             <div class="row">
-
-                <div class="col-xs-12 col-sm-12 col-md-12">
-                    <div class="form-group">
-                        <strong>Product Name:</strong>
-                        <input type="text" name="productName" class="form-control" placeholder="product name">
+                <div class="col">
+                    <div class="row mb-3">
+                        <label for="" class="col-sm-3 col-form-label">Product</label>
+                    </div>
+                    <div class="row mb-3">
+                        <label for="productcode" class="col-sm-3 col-form-label">Product Code</label>
+                        <div class="col-sm-9">
+                            <input type="text" name="product_code" class="form-control" id="productcode">
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <label for="productname" class="col-sm-3 col-form-label">Product Name</label>
+                        <div class="col-sm-9">
+                            <input type="text" name="product_name" class="form-control" id="productname">
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <label for="description" class="col-sm-3 col-form-label">Description</label>
+                        <div class="col-sm-9">
+                            <input type="text" name="description" class="form-control" id="description">
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <label for="standardcost" class="col-sm-3 col-form-label">Standard Cost</label>
+                        <div class="col-sm-9">
+                            <input type="text" name="standard_cost" class="form-control" id="standardcost">
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <label for="listprice" class="col-sm-3 col-form-label">List Price</label>
+                        <div class="col-sm-9">
+                            <input type="text" name="list_price" class="form-control" id="listprice">
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <label for="reorderlevel" class="col-sm-3 col-form-label">Reorder Level</label>
+                        <div class="col-sm-9">
+                            <input type="text" name="reorder_level" class="form-control" id="reorderlevel">
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <label for="targetlevel" class="col-sm-3 col-form-label">Target Level</label>
+                        <div class="col-sm-9">
+                            <input type="text" name="target_level" class="form-control" id="targetlevel">
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <label for="quantityperunit" class="col-sm-3 col-form-label">Quantity Per Unit</label>
+                        <div class="col-sm-9">
+                            <input type="text" name="quantity_per_unit" class="form-control" id="quantityperunit">
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <label for="" class="col-sm-3 col-form-label"> Discontinued</label>
+                        
+                    </div>
+                    <div class="row mb-3">
+                        <label for="category" class="col-sm-3 col-form-label">Category</label>
+                        <div class="col-sm-9">
+                            <input type="text" name="category" class="form-control" id="category">
+                        </div>
                     </div>
                 </div>
-
-                <div class="col-xs-12 col-sm-12 col-md-12">
-                    <div class="form-group">
-                        <strong>Quantity per Unit:</strong>
-                        <input type="text" name="quantityPerUnit" class="form-control" placeholder="Quantity per Unit">
-                    </div>
-                </div>
-
-                <div class="col-xs-12 col-sm-12 col-md-12">
-                    <div class="form-group">
-                        <strong>Unit Price:</strong>
-                        <input type="text" name="unitPrice" class="form-control" placeholder="Unit Price">
-                    </div>
-                </div>
-
-                <div class="col-xs-12 col-sm-12 col-md-12">
-                    <div class="form-group">
-                        <strong>Unit in Stock</strong>
-                        <input type="number" name="unitStock" class="form-control" placeholder="Unit in Stock">
-                    </div>
-                </div>
-
-                <div class="col-xs-12 col-sm-12 col-md-12">
-                    <div class="form-group">
-                        <strong>Unit on Order:</strong>
-                        <input type="number" name="unitOrder" class="form-control" placeholder="Unit on Order">
-                    </div>
-                </div>
-
-                <div class="col-xs-12 col-sm-12 col-md-12">
-                    <div class="form-group">
-                        <strong>Reorder level:</strong>
-                        <input type="number" name="reorderLevel" class="form-control" placeholder="Reorder Level">
-                    </div>
-                </div>
-
-                <div class="col-xs-12 col-sm-12 col-md-12">
-                    <div class="form-group">
-                        <label for="discontinued">Discontinued Status</label>
-                        <select name="discontinued" class="form-control" aria-label="Default select example">
-                            <option value="" disabled>Discontinued</option>
-                            <option value="1">Yes</option>
-                            <option value="0">No</option>
-                        </select>
-                    </div>
-                </div>
-
-                <div class="card-footer mt-5">
-                    <div class="col-xs-12 col-sm-12 col-md-12 text-center">
-                        <button type="submit" class="btn btn-primary mt-5"> Submit</button>
-                        <a class="btn btn-secondary mt-5" href=" {{ route('products.index') }} " > Back</a>
-                    </div>
-                </div>
-
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+                <button type="submit" class="btn btn-primary"> Save</button>
             </div>
         </form>
     </div>
+
 </div>
-
 @endsection
-
-
-            
