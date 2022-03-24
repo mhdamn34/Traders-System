@@ -118,7 +118,7 @@ Route::group([
     'as'=>'shipper.'
 ], function() {
     Route::get('/', 'ShipperController@index')->name('index');
-    Route::get('/create', 'ShipperController@create')->name('create');
+    Route::get('/create', 'ShipperController@create')->name('newShipper');
     Route::post('/', 'ShipperController@store')->name('store');
     Route::get('/{shipper}', 'ShipperController@show')->name('show');
     Route::get('/{shipper}/edit', 'ShipperController@edit')->name('edit');

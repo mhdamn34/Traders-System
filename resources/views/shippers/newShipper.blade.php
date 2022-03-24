@@ -72,12 +72,22 @@
     <div class="card-header">
         <h5>General</h5>
     </div>
+    @if ($errors->any())
+        <div class="alert alert-danger">
+            <strong>Whoops!</strong> There were some problems with your input.<br><br>
+            <ul>
+                @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+        @endif
+    <form action=" {{ route('shipper.store') }} " method="POST">
+        @csrf
+        <div class="card-body">
+            <div class="row">
+                <div class="col">
 
-    <div class="card-body">
-        <div class="row">
-            <div class="col">
-                <form action=" {{ route('shipper.store') }} " method="POST">
-                @csrf
                     <div class="row mb-3">
                         <label for="company" class="col-sm-3 col-form-label">Company</label>
                         <div class="col-sm-9">
@@ -136,6 +146,13 @@
                     <br>
                     <h5>Address</h5>
 
+                    
+                    <div class="row mb-3">
+                        <label for="street" class="col-sm-3 col-form-label">Address</label>
+                        <div class="col-sm-9">
+                            <input type="text" name="address" class="form-control" id="street">
+                        </div>
+                    </div>
                     <div class="row mb-3">
                         <label for="street" class="col-sm-3 col-form-label">Street</label>
                         <div class="col-sm-9">
@@ -170,46 +187,44 @@
                             <input type="text" name="country" class="form-control" id="country">
                         </div>
                     </div>
-            </div>
+                </div>
 
-            <div class="col">
-                <div class="row mb-3">
-                    <label for="email" class="col-sm-2 col-form-label">Email</label>
-                    <div class="col-sm-10">
-                        <input type="text" name="email_address" class="form-control" id="email">
+                <div class="col">
+                    <div class="row mb-3">
+                        <label for="email" class="col-sm-2 col-form-label">Email</label>
+                        <div class="col-sm-10">
+                            <input type="text" name="email_address" class="form-control" id="email">
+                        </div>
+                    </div>
+
+                    <div class="row mb-3">
+                        <label for="web" class="col-sm-2 col-form-label">Web Page</label>
+                        <div class="col-sm-10">
+                            <input type="text" name="web_page" class="form-control" id="web">
+                        </div>
+                    </div>
+
+                    <div class="row mb-3">
+                        <label for="notes" class="col-sm-2 col-form-label">Notes</label>
+                        <div class="col-sm-10">
+                            <input type="text" name="notes" class="form-control" id="notes">
+                        </div>
+                    </div>
+
+                    <div class="row mb-3">
+                        <label for="img" class="col-sm-2 col-form-label">Image</label>
+                        <div class="col-sm-10">
+                            <input type="file" name="image" class="form-control" id="img">
+                        </div>
                     </div>
                 </div>
 
-                <div class="row mb-3">
-                    <label for="web" class="col-sm-2 col-form-label">Web Page</label>
-                    <div class="col-sm-10">
-                        <input type="text" name="web_page" class="form-control" id="web">
-                    </div>
+                <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+                    <button type="submit" class="btn btn-primary"> Save</button>
                 </div>
-
-                <div class="row mb-3">
-                    <label for="notes" class="col-sm-2 col-form-label">Notes</label>
-                    <div class="col-sm-10">
-                        <input type="text" name="notes" class="form-control" id="notes">
-                    </div>
-                </div>
-
-                <div class="row mb-3">
-                    <label for="img" class="col-sm-2 col-form-label">Image</label>
-                    <div class="col-sm-10">
-                        <input type="file" name="image" class="form-control" id="img">
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-xs-12 col-sm-12 col-md-12 text-center">
-                <button type="submit" class="btn btn-primary"> Save</button>
             </div>
         </div>
-        </form>
-    </div>
-
+    </form>
 </div>
-
 
 @endsection

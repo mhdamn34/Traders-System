@@ -31,6 +31,7 @@ class ShipperController extends Controller
             'business_phone' => 'required',
             'mobile_phone' => 'required',
             'fax_number' => 'required',
+            'address' => 'required',
             'street' => 'required',
             'city' => 'required',
             'postal_code' => 'required',
@@ -59,7 +60,8 @@ class ShipperController extends Controller
 
         $shipper->save();
 
-        return redirect()->route('shippers.index');
+        return redirect()->route('shipper.index')
+        -> with('Success','Shipper Added Successfully');
     }
 
    
