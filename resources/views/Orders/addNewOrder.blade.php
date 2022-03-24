@@ -32,7 +32,7 @@
                 </ul>
                 <form class="d-flex">
 
-                    <button class="btn btn-outline-success" type="submit">Close</button>
+                    <a button class="btn btn-outline-success" href="{{ url('/orders') }} " type="submit">Close</a></button>
                 </form>
 
             </div>
@@ -43,8 +43,8 @@
             <div class="row">
                 <div class="col">
                     <div class="mb-3 row">
-                        <label for="customer" class="col-sm-2 col-form-label">Customer</label>
-                        <div class="col-sm-10">
+                        <label for="customer" class="col-sm-5 col-form-label">Customer</label>
+                        <div class="col-sm-7">
 
 
                             <div class="col">
@@ -61,8 +61,8 @@
                     </div>
 
                     <div class="mb-3 row">
-                        <label for="customer" class="col-sm-2 col-form-label">E-mail Address</label>
-                        <div class="col-sm-10">
+                        <label for="customer" class="col-sm-5 col-form-label">E-mail Address</label>
+                        <div class="col-sm-7">
                             <input type="customer" class="form-control" id="customer">
                         </div>
                     </div>
@@ -71,8 +71,8 @@
 
                 <div class="col">
                     <div class="mb-3 row">
-                        <label for="customer" class="col-sm-2 col-form-label">Salesperson</label>
-                        <div class="col-sm-10">
+                        <label for="customer" class="col-sm-5 col-form-label">Salesperson</label>
+                        <div class="col-sm-7">
                         <div class="col">
                                 <div class="input-group mb-3" class="form-group">
                                     <select class="form-select" id="createdSelect">
@@ -94,8 +94,8 @@
                         </div>
                     </div>
                     <div class="mb-3 row">
-                        <label for="customer" class="col-sm-2 col-form-label">Order Date</label>
-                        <div class="col-sm-10">
+                        <label for="customer" class="col-sm-5 col-form-label">Order Date</label>
+                        <div class="col-sm-7">
                         <input type="date" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
                         </div>
                     </div>
@@ -147,7 +147,7 @@
                
                     <tr>
                         <th></th>
-                        <th>Total</th>
+                        <!-- <th>Total</th> -->
                         <th></th>
                         <th></th>
                         <th></th>
@@ -161,6 +161,9 @@
 
             </table>
         </div>
+        <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+                <button type="submit" class="btn btn-primary"> Save</button>
+            </div>
 
     </div>
 

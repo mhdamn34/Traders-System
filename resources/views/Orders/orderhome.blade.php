@@ -42,20 +42,19 @@
             </tr>
         </thead>
         <tbody>
-            @foreach($orders as $order)
+        <tr>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
 
-            <tr>
-                <td>{{$order->OrderID}}</td>
-                <td>{{$order->OrderDate}}</td>
-                <td>{{$order->StatusName}}</td>
-                <td>{{$order->Salesperson}}</td>
-                <td>{{$order->customer}}</td>
-                <td>{{$order->ShippedDate}}</td>
-                <td>{{$order->ShippingFee}}</td>
-                <td>{{$order->Taxes}}</td>
-                <td>{{$order->Total}}</td>
             </tr>
-            @endforeach
+    
         </tbody>
 
 
