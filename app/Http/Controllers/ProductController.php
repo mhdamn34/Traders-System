@@ -31,31 +31,41 @@ class ProductController extends Controller
         return view('products.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
-        //
         $request->validate([
 
-            'productName' => 'required',
-            'quantityPerUnit' => 'required',
-            'unitStock' => 'required',
-            'unitPrice' => 'required',
-            'unitOrder' => 'required',
-            'reorderLevel' => 'required',
-
+            'product_name' => 'required',
+            'product_code' => 'required',
+            'category' => 'required',
+            'supplier' => 'required',
+            'quantity_per_unit' => 'required',
+            'description' => 'required',
+            'standard_cost' => 'required',
+            'list_price' => 'required',
+            'reorder_level' => 'required',
+            'target_level' => 'required',
+            'default_reorder' => 'required',
+            // 'discontinued' => 'required',
 
         ]);
-        Product::create($request->all());
 
+        $product = new Product();
+        $product->product_code = $request->product_code;
+        $product->product_name = $request->product_name;
+        $product->description = $request->description;       
+        $product->standard_cost = $request->standard_cost;
+        $product->list_price = $request->list_price;
+        $product->reorder_level = $request->reorder_level;
+        $product->target_level = $request->target_level;
+        $product->quantity_per_unit = $request->quantity_per_unit;
+        $product->discontinued = $request->discontinued;
+        $product->category = $request->category;
+        $product->save();
 
         return redirect()->route('products.index')
             ->with('success', 'Product added successfully.');
+        
     }
 
     /**

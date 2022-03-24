@@ -8,7 +8,8 @@ class Product extends Model
 {
     //
     protected $fillable = [
-        'productName','quantityPerUnit','unitPrice', 'unitStock', 'unitOrder', 'reorderLevel', 'discontinued'
+        'product_code','product_name','category', 'supplier', 'quantity_per_unit', 'description', 'standard_cost',
+        'list_price', 'reorder_level','target_level','default_reorder','discontinued'
     ];
 }
 

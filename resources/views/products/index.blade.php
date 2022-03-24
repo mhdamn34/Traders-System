@@ -4,11 +4,11 @@
 
 <div class="card">
     <div class="card-header">
-        <h3>Product List</h3>
+        <h3>Products Menu</h3>
 
         <div class="row">
             <div class="col">
-                <a href=" {{ route('products.create') }}" class="btn btn-primary"> New product</a>
+                <a href="{{ url('/products/create') }}" class="btn btn-primary"> New Product</a>
                 <a href="" class="btn btn-primary"> Collect Data via E-mail</a>
                 <a href="" class="btn btn-primary"> Add From Outlook</a>
                 <a href="" class="btn btn-primary"> E-mail List</a>
@@ -31,41 +31,27 @@
         <table class="table table-bordered">
             <thead>
                 <tr>
-                    <th scope="col"> Id</th>
-                    <th scope="col"> Supplier Id</th>
+                    <th scope="col"> ID</th>
+                    <th scope="col"> Name</th>
                     <th scope="col"> Product Code</th>
-                    <th scope="col"> Product Name</th>
-                    <th scope="col"> Description</th>
-                    <th scope="col"> Standard Cost</th>
-                    <th scope="col"> List Price</th>
-                    <th scope="col"> Rerorder Level</th>
-                    <th scope="col"> Quantity Per Unit</th>
-                    <th scope="col"> Discontinued </th>
-                    <th scope="col"> Category</th>
-                    <th scope="col"> Action</th>
+                    <th scope="col"> Category-mail</th>
+                    <th scope="col"> Supplier</th>
+                    <th scope="col" width="200px"> Action</th>
                 </tr>
             </thead>
             <tbody>
                 @foreach( $products as $product)
                 <tr>
                     <td> {{ $product -> id}}</td>
-                    <td> </td>
-                    <td> {{ $product -> product_code}} </td>
                     <td> {{ $product -> product_name}}</td>
-                    <td> {{ $product -> description}}</td>
-                    <td> {{ $product -> standard_cost}}</td>
-                    <td> {{ $product -> list_price}}</td>
-                    <td> {{ $product -> reorder_level}}</td>
-                    <td> {{ $product -> target_level}}</td>
-                    <td> {{ $product -> quantity_per_unit}}</td>
-                    <td> {{ $product -> discontinued}}</td>
-                    <td> {{ $product -> minimum_reorder}}</td>
+                    <td> {{ $product -> product_code}}</td>
                     <td> {{ $product -> category}}</td>
+                    <td> {{ $product -> supplier}}</td>
                     <td>
-                        <form action=" {{ route('product.destroy', $product->id) }}" method="POST">
+                        <form action="" method="POST">
                             <div class="btn-group" role="group" aria-label="Basic example">
-                                <a class="btn btn-primary" href=" {{ route('product.edit', $product->id) }} " role="button">Update</a>
-                                <a class="btn btn-info" href=" {{ route('product.show', $product->id) }} " role="button">View</a>
+                                <a class="btn btn-primary" href=" {{ route('products.edit', $product->id) }} " role="button">Update</a>
+                                <a class="btn btn-info" href=" {{ route('products.show', $product->id) }} " role="button">View</a>
                                 @csrf
                                 @method('DELETE')
                                 <button type="submit" class="btn btn-danger">Delete</button>
@@ -79,4 +65,5 @@
     </div>
 </div>
 
-@endsection
+@endsection@extends('layouts.main.app')
+
