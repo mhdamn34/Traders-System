@@ -14,6 +14,6 @@ class Order extends Model
 
     public function orderstatus()
     {
-        return $this->belongsTo(OrderStatus::class, 'StatusID', 'StatusID');
+        // return $this->belongsTo(OrderStatus::class, 'StatusID', 'StatusID');
     }
 }
