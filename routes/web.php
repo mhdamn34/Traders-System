@@ -113,6 +113,20 @@ Route::get('/ListShippers', function () {
 });
 
 
+Route::group([
+    'prefix'=>'shipper',
+    'as'=>'shipper.'
+], function() {
+    Route::get('/', 'ShipperController@index')->name('index');
+    Route::get('/create', 'ShipperController@create')->name('create');
+    Route::post('/', 'ShipperController@store')->name('store');
+    Route::get('/{shipper}', 'ShipperController@show')->name('show');
+    Route::get('/{shipper}/edit', 'ShipperController@edit')->name('edit');
+    Route::patch('/{shipper}', 'ShipperController@update')->name('update');
+    Route::delete('/{shipper}', 'ShipperController@destroy')->name('destroy');
+});
+
+
 
 //Route Sales
 Route::get('/SalesReport', function () {

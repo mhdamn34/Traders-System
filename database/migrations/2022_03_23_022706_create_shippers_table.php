@@ -21,7 +21,6 @@ class CreateShippersTable extends Migration
             $table->string('email_address');
             $table->string('job_title');
             $table->string('business_phone');
-            $table->string('home_phone');
             $table->string('mobile_phone');
             $table->string('fax_number');
             $table->string('address');
