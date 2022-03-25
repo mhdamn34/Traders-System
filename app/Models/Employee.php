@@ -15,8 +15,12 @@ class Employee extends Model
 
     use SoftDeletes;
 
-    public function user() {
-        return $this->belongsTo(User::class);
+    public function Employee_Privileges() {
+        return $this->hasMany('Employee_Privileges');
+    }
+
+    public function Order() {
+        return $this->has('Order');
     }
 }
   

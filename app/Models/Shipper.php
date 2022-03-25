@@ -11,4 +11,8 @@ class Shipper extends Model
         'company','first_name','last_name', 'email_address', 'job_title', 'business_phone', 'mobile_phone',
         'fax_number', 'address','city','state','postal_code','country', 'web_page','notes'
     ];
+
+    public function Order() {
+        return $this->has('Order');
+    }
 }

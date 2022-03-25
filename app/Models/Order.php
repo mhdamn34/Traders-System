@@ -8,9 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Order extends Model
 {
     //
-    protected $fillable = [
-        'OrderID','EmployeeID','OrderDate','CustomerID','ShippedDate', 'ShipperID', 'ShipName','ShipAdddress','ShipCity','ShipState', 'ShipZIP','ShipCountry','ShippingFee','Taxes','PaymentType','PaidDate','Notes','TaxRate','TaxStatus','StatusID'
-    ];
+    protected $fillable = [];
 
     public function orderstatus()
     {
@@ -20,5 +18,24 @@ class Order extends Model
     //  public function dropdown(){
     //     return $this->belongsTo(Customers::class, 'id', 'id');
     //  }
+
+    public function Employee(){
+
+        return $this->belongsToMany('Employee');
+    }
+
+    public function Customer(){
+
+        return $this->belongsTo('Customer');
+    }
+
+    public function Shipper(){
+
+        return $this->belongsToMany('Shipper');
+    }
+    public function Order_Status(){
+
+        return $this->belongsToMany('Order_Status');
+    }
     
 }

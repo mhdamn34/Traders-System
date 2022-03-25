@@ -8,7 +8,7 @@ class OrderStatus extends Model
 {
     //
     protected $fillable = [
-        'StatusID','StatusName'
+        'StatusName'
     ];
 
     

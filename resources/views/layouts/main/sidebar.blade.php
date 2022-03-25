@@ -42,13 +42,13 @@
                             </a>
                          </li>
                         <li class="nav-item">
-                            <a href=" {{ route('customer.index') }}" class="nav-link">
+                            <a href="" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                     <p>Customer Details</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="" class="nav-link">
+                            <a href=" {{ route('customer.index') }} " class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                     <p>Customer Lists</p>
                             </a>
@@ -60,7 +60,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
+                            <a href=" {{ url('/orders') }} " class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                     <p>Order List</p>
                             </a>
@@ -76,7 +76,7 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="#" class="nav-link ">
+                            <a href=" {{ url('/employee') }} " class="nav-link ">
                                 <i class="far fa-circle nav-icon"></i>
                                     <p>Inventory List</p>
                             </a>
@@ -94,7 +94,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
+                            <a href="{{ url('/purchase') }}" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                     <p>Purchase Order List</p>
                             </a>
@@ -116,7 +116,7 @@
                             </a>
                          </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
+                            <a href=" {{ url('/supplier') }} " class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                     <p>Supplier Lists</p>
                             </a>
@@ -138,7 +138,7 @@
                             </a>
                          </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
+                            <a href=" {{ url('/shippers') }} " class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                     <p>Shipper Lists</p>
                             </a>
@@ -160,7 +160,7 @@
                             </a>
                          </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
+                            <a href=" {{ url('/supplier') }} " class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                     <p>Supplier Lists</p>
                             </a>
@@ -193,7 +193,7 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
+                            <a href=" {{ url('/employee') }} " class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                     <p>Employee Details</p>
                             </a>
