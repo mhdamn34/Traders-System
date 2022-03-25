@@ -16,7 +16,7 @@
                 <a class="nav-link active" aria-current="page" href="#">View Invoice</a>
             </li>
 
-            <a class="nav-link" href="{{ url('/home') }}">Home</a>
+            <a class="nav-link" href="{{ url('/') }}">Home</a>
 
         </ul>
 
