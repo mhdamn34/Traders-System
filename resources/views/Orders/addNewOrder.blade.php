@@ -48,11 +48,13 @@
 
 
                             <div class="col">
-                                <div class="input-group mb-3" class="form-group">
-                                    <select class="form-select" id="createdSelect">
-                                        <option selected> </option>
-                                        <option value="1">Company A</option>
-                                        <option value="2">Company AA</option>
+                                <div class="input-group mb-3" class="form-group" name="company">
+                                    <select class="form-select" name="company" id="createdSelect">
+                                        <option selected>Choose Company</option>
+                
+                                    </select>
+                                    
+
                                     </select>
                                 </div>
                             </div>
@@ -73,7 +75,7 @@
                     <div class="mb-3 row">
                         <label for="customer" class="col-sm-5 col-form-label">Salesperson</label>
                         <div class="col-sm-7">
-                        <div class="col">
+                            <div class="col">
                                 <div class="input-group mb-3" class="form-group">
                                     <select class="form-select" id="createdSelect">
                                         <option selected> </option>
@@ -87,7 +89,7 @@
                                         <option value="8">Robert Zare</option>
                                         <option value="9">Steven Thorpe</option>
 
-                                        
+
                                     </select>
                                 </div>
                             </div>
@@ -96,7 +98,7 @@
                     <div class="mb-3 row">
                         <label for="customer" class="col-sm-5 col-form-label">Order Date</label>
                         <div class="col-sm-7">
-                        <input type="date" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                            <input type="date" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
                         </div>
                     </div>
 
@@ -143,8 +145,8 @@
                     </tr>
                 </thead>
                 <tbody>
-               
-               
+
+
                     <tr>
                         <th></th>
                         <!-- <th>Total</th> -->
@@ -155,15 +157,15 @@
                         <th></th>
 
                     </tr>
-                   
+
                 </tbody>
 
 
             </table>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12 text-center">
-                <button type="submit" class="btn btn-primary"> Save</button>
-            </div>
+            <button type="submit" class="btn btn-primary"> Save</button>
+        </div>
 
     </div>
 

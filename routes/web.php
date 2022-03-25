@@ -191,3 +191,7 @@ Route::group([
     Route::patch('/{customer}', 'CustomerController@update')->name('update');
     Route::delete('/{customer}', 'CustomerController@destroy')->name('destroy');
 });
+
+//POST
+
+Route::get('insert', 'PostController@insert');

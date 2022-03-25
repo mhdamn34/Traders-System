@@ -25,7 +25,17 @@ class OrderController extends Controller
     public function dropDownShow(Request $request)
     {
         // $items = 
+        // if ($this->order_id !=''){
+        //     $this->orders = Order::where('order_id', $this->order_id)->get();
+        // }
+        
+
     }
+    public function dropdown(){
+
+        return $this->belongsTo(Customers::class, 'id', 'id');
+     }
+
 }
 
 
