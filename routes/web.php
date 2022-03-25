@@ -15,10 +15,6 @@ use PhpParser\Node\Expr\FuncCall;
 |
 */
 
-// Route::get('/home', function () {
-//     return view('welcome');
-// });
-
 //HOMEPAGE
 Route::get('/', function () {
     return view('homepage');
