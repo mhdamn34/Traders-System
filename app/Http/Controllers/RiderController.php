@@ -16,6 +16,7 @@ class RiderController extends Controller
     public function index()
     {
         //
+
     }
 
     /**
@@ -34,9 +35,16 @@ class RiderController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store()
     {
         //
+        $rider = new Rider();
+        $rider -> rider_name = ("Ali");
+        $rider -> phone_number = ("0123468433");
+        $rider -> date_of_birth = ("2001-03-04");
+
+        $rider -> save();
+        
     }
 
     /**
