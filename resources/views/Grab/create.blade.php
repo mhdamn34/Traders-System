@@ -29,8 +29,8 @@
                     <div class="row mb-3">
                         <label for="company" class="col-sm-3 col-form-label">Rider Name</label>
                         <div class="col-sm-9">
-
                             <div class="input-group mb-3" class="form-group">
+
                                 <select class="form-select" id="ridername" name="rider_id">        
                                     <option value="1">Fina</option>
                                     <option value="3">Ali</option>
@@ -38,7 +38,6 @@
                                     <option value="6">Lili</option>         
                                 </select>
                             </div>
-
                         </div>
                     </div>
 
@@ -51,11 +50,11 @@
                     <div class="row mb-3">
                         <label for="lastname" class="col-sm-3 col-form-label">Order Description</label>
                         <div class="col-sm-9">
-                            <input type="textarea" name="order_description" class="form-control" id="orderdescription">
+                            <textarea name="order_description" class="form-control" id="orderdescription"></textarea>
                         </div>
                     </div>
-
                 </div>
+
                 <div class="col-xs-12 col-sm-12 col-md-12 text-center">
                     <button type="submit" class="btn btn-primary"> Save</button>
                 </div>

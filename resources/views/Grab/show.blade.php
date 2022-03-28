@@ -8,6 +8,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <h5 class="mt-5 mb-3">View Record</h5>
+
                     <div class="form-group">
                         <label>Rider Name : </label>
                         <p><b>{{ $order_grab->rider->rider_name }}</b></p>
