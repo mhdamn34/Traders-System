@@ -49,9 +49,9 @@
                         </div>
                     </div>
                     <div class="row mb-3">
-                        <label for="lastname" class="col-sm-3 col-form-label">Order Desciption</label>
+                        <label for="lastname" class="col-sm-3 col-form-label">Order Description</label>
                         <div class="col-sm-9">
-                            <input type="text" name="order_description" class="form-control" id="orderdescription">
+                            <input type="textarea" name="order_description" class="form-control" id="orderdescription">
                         </div>
                     </div>
 
@@ -61,11 +61,6 @@
                 </div>
         </form>
 
-
-
     </div>
-
-
-
 
     @endsection

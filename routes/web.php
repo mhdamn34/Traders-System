@@ -19,7 +19,8 @@ Route::get('/article', 'ArticleController@store')->name('article.store');
 //ORDER GRAB ROUTE
 Route::get('/order_grab', 'OrderGrabController@index')->name('Grab.index');
 Route::get('/create', 'OrderGrabController@create')->name('Grab.create');
-Route::get('/{order_grab}/show', 'OrderGrabController@show')->name('Grab.show');
+Route::get('/show/{order_grab}', 'OrderGrabController@show')->name('Grab.show');
+// Route::get('/{customer}', 'CustomerController@show')->name('show');
 Route::post('/order_grab', 'OrderGrabController@store')->name('Grab.store');
 Route::get('/{order_grab}/edit', 'OrderGrabController@edit')->name('Grab.edit');
 Route::delete('order_grabs/{order_grab}', 'OrderGrabController@destroy')->name('Grab.destroy');
@@ -194,3 +195,5 @@ Route::group([
 //POST
 
 Route::get('/post', 'PostController@store')->name('post.store');
+
+

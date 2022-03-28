@@ -16,7 +16,7 @@ class OrderGrabController extends Controller
     public function index()
     {
         $order_grab = OrderGrab::all();
-        return view('Grab.index',compact('order_grab'));
+        return view('Grab.index', compact('order_grab'));
     }
 
     /**
@@ -40,21 +40,21 @@ class OrderGrabController extends Controller
     public function store(Request $request)
     {
         //
-        $request -> validate([
-            'rider_id' => 'required', 
-            'order_description'=>'required',
-            'order_name'=>'required',
+        $request->validate([
+            'rider_id' => 'required',
+            'order_description' => 'required',
+            'order_name' => 'required',
 
         ]);
 
         $order_grab = new OrderGrab();
-        $order_grab -> rider_id = $request -> rider_id;
-        $order_grab -> order_name = $request -> order_name;
-        $order_grab -> order_description = $request -> order_description;
-        $order_grab -> save();
+        $order_grab->rider_id = $request->rider_id;
+        $order_grab->order_name = $request->order_name;
+        $order_grab->order_description = $request->order_description;
+        $order_grab->save();
 
         return redirect()->route('Grab.index')
-        ->with('success', 'order booked successfully.' );
+            ->with('success', 'order booked successfully.');
     }
 
     /**
@@ -63,9 +63,11 @@ class OrderGrabController extends Controller
      * @param  \App\Models\OrderGrab  $orderGrab
      * @return \Illuminate\Http\Response
      */
-    public function show(OrderGrab $orderGrab)
+    public function show(OrderGrab $order_grab)
+
     {
         //
+        return view('Grab.show', compact('order_grab'));
     }
 
     /**
