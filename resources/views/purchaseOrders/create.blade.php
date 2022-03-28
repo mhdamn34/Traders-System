@@ -7,25 +7,20 @@
         <h3> Purchase Order # (New)</h3>
 
         <div class="row">
-            <div class="col-2">
-                status
-            </div>
-            <div class="col-8 text-align-center">
-                <ul class="nav flex-column justify-content-center">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Submit for approval</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Approve purchase</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Cancel Purchase</a>
-                    </li>
-                </ul>
-            </div>
+            <ul class="nav nav-pills justify-content-centent">
+                <li class="nav-item">
+                    <a class="nav-link " aria-current="page" href="#">Submit for Approval</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="#">Approve Purchase</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link ">Cancel Purchase</a>
+                </li>
+            </ul>
 
             <div class="col d-flex justify-content-end">
-                <a href=" {{ url('/purchaseHome') }} " class="btn btn-secondary"> Close</a>
+                <a href=" {{ url('/purchase') }} " class="btn btn-secondary"> Close</a>
             </div>
         </div>
     </div>
@@ -131,63 +126,17 @@
 <div class="card">
     <div class="card-body">
 
-        <ul class="nav nav-tabs" id="myTab" role="tablist">
-            <li class="nav-item" role="presentation">
-                <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#purchaseDetails" type="button" role="tab" aria-controls="home" aria-selected="true">Purchase Details </button>
+        <ul class="nav nav-pills">
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Purchase Details</a>
             </li>
-            <li class="nav-item" role="presentation">
-                <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#inventoryReceiving" type="button" role="tab" aria-controls="profile" aria-selected="false">Inventory Receiving </button>
+            <li class="nav-item">
+                <a class="nav-link active" href="#">Inventory Receiving</a>
             </li>
-            <li class="nav-item" role="presentation">
-                <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#paymentInformation" type="button" role="tab" aria-controls="contact" aria-selected="false">Payment Information </button>
+            <li class="nav-item">
+                <a class="nav-link active" href="#">Payment Information</a>
             </li>
         </ul>
-        <div class="tab-content" id="myTabContent">
-            <div class="tab-pane fade show active" id="purchaseDetails" role="tabpanel" aria-labelledby="home-tab">
-
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th scope="col"> Product</th>
-                            <th scope="col"> Qty</th>
-                            <th scope="col"> Unit Cost</th>
-                            <th scope="col"> Total Price</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                    </tbody>
-                </table>
-
-            </div>
-            <div class="tab-pane fade" id="inventoryReceiving" role="tabpanel" aria-labelledby="profile-tab">
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th scope="col"> Product</th>
-                            <th scope="col"> Qty</th>
-                            <th scope="col"> Unit Cost</th>
-                            <th scope="col"> Total Price</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <div class="tab-pane fade" id="paymentInformation" role="tabpanel" aria-labelledby="contact-tab">...</div>
-        </div>
-
     </div>
 </div>
 

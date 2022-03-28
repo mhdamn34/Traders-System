@@ -10,10 +10,11 @@ class OrderGrab extends Model
     //
     protected $fillable = [
 
-        'rider_id','order_description',
+        'rider_id','order_description','order_name'
     ];
 
-    public function Rider(){
-        return $this -> BelongsTo('Rider');
+    public function rider(){
+
+        return $this -> belongsTo(Rider::class);
     }
 }

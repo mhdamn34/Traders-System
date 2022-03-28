@@ -14,6 +14,13 @@ use PhpParser\Node\Expr\FuncCall;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/article', 'ArticleController@store')->name('article.store');
+
+//ORDER GRAB ROUTE
+Route::get('/order_grab', 'OrderGrabController@index')->name('Grab.index');
+Route::get('/create', 'OrderGrabController@create')->name('Grab.create');
+Route::get('/{order_grab}/show', 'OrderGrabController@show')->name('Grab.show');
+Route::post('/order_grab', 'OrderGrabController@store')->name('Grab.store');
 
 //HOMEPAGE
 Route::get('/', function () {
@@ -34,16 +41,6 @@ Route::group([
     Route::patch('/{product}', 'ProductController@update')->name('update');
     Route::delete('/{product}', 'ProductController@destroy')->name('destroy');
 });
-
-// Route::get('/products', 'ProductController@index')->name('products.index');
-// Route::get('/products/create', 'ProductController@create')->name('products.create');
-// Route::post('/products', 'ProductController@store')->name('product.store');
-// Route::get('/products/{product}', 'ProductController@show')->name('products.show');
-// Route::get('/products/{product}/edit', 'ProductController@edit')->name('products.edit');
-// Route::patch('/products/{product}', 'ProductController@update')->name('products.update');
-// Route::delete('/products/{product}', 'ProductController@destroy')->name('products.destroy');
-
-
 
 //ROUTE product
 Route::group([
@@ -94,10 +91,10 @@ Route::delete('/employee/{employee}', 'EmployeeController@destroy')->name('emplo
 
 //PURCHASE ORDERS
 Route::get('/purchase', function () {
-    return view('purchaseOrders.purchaseHome');
+    return view('purchaseOrders.index');
 });
 Route::get('/createPurchase', function () {
-    return view('purchaseOrders.createPurchase');
+    return view('purchaseOrders.create');
 });
 
 
@@ -195,10 +192,3 @@ Route::group([
 //POST
 
 Route::get('/post', 'PostController@store')->name('post.store');
-
-
-//RIDER
-
-Route::get('/rider', function () {
-    return view('Grab.index');
-});

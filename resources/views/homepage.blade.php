@@ -147,7 +147,7 @@
             <a class="btn btn-primary" href=" {{ url('/employee') }}">Employees</a>
             <a class="btn btn-primary" href=" {{ url('/customer') }}">Customer</a>
             <a class="btn btn-primary" href=" {{ url('/product') }}"> Product</a>
-
+            <a class="btn btn-primary" href=" {{ url('/order_grab') }}"> Order</a>
         </div>
     </div>
 
