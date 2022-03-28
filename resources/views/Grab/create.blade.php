@@ -7,7 +7,7 @@
         <h5>Create New Order</h5>
         <a href=" {{ route('Grab.index') }}" class="btn btn-secondary">Back</a>
     </div>
-    
+
 
 
     <div class="card-body">
@@ -30,11 +30,11 @@
                         <label for="company" class="col-sm-3 col-form-label">Rider Name</label>
                         <div class="col-sm-9">
                             <div class="input-group mb-3" class="form-group">
-                                <select class="form-select" id="ridername" name="rider_id">    
-                                    <div class="control-group">
-                                        
-                                    </div>  
-                                  
+
+                                <select class="form-select" id="ridername" name="rider_id">
+                                    @foreach ($riders as $rider)
+                                    <option value=" {{ $rider->id }} "> {{ $rider -> rider_name}}</option>
+                                    @endforeach
                                 </select>
                             </div>
                         </div>

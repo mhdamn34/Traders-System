@@ -13,6 +13,6 @@ class Rider extends Model
     ];
 
     public function ordergrab(){
-        return $this->hasMany('OrderGrab');
+        return $this->hasMany(OrderGrab::class);
     }
 }

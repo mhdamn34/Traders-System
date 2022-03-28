@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\OrderGrab;
+use App\Models\Rider;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
@@ -15,7 +16,8 @@ class OrderGrabController extends Controller
      */
     public function index()
     {
-        $order_grab = OrderGrab::all();
+        // $order_grab = OrderGrab::all();
+        $order_grab = OrderGrab::with('Rider')->get();
         return view('Grab.index', compact('order_grab'));
     }
 
@@ -27,8 +29,8 @@ class OrderGrabController extends Controller
     public function create()
     {
         //
-        $order_grab = OrderGrab::all();
-        return view('Grab.create', compact('order_grab'));
+        $riders = Rider::all();
+        return view('Grab.create', compact('riders'));
     }
 
     /**

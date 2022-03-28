@@ -6,6 +6,8 @@ use App\Models\Rider;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
+use function GuzzleHttp\Promise\all;
+
 class RiderController extends Controller
 {
     /**
@@ -16,6 +18,7 @@ class RiderController extends Controller
     public function index()
     {
         //
+        $riders = Rider::all();
 
     }
 
