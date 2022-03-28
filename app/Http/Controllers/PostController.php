@@ -47,24 +47,13 @@ class PostController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store()
     {
-        //
-        $request->validate([
-            'title' => 'required',
-            'message' => 'required',
-            'created_by' => 'required',
-            'created_at' => 'required',
-            'updated_at' => 'required'
-
-        ]);
-
+        
         $post = new Post();
-        $post->title = $request->title;
-        $post->message = $request->message;
-        $post->created_by = $request->created_by;
-        $post->updated_at = $request->updated_at;
-
+        $post -> title =("Post for today");
+        $post -> message =("Monday");
+        $post -> created_by =("Syahirah");
         $post ->save();
     }
 

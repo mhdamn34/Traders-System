@@ -194,4 +194,4 @@ Route::group([
 
 //POST
 
-Route::get('insert', 'PostController@insert');
+Route::get('/post', 'PostController@store')->name('post.store');
