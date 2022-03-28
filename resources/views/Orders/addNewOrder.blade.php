@@ -48,13 +48,12 @@
 
 
                             <div class="col">
-                                <div class="input-group mb-3" class="form-group" name="company">
-                                    <select class="form-select" name="company" id="createdSelect">
-                                        <option selected>Choose Company</option>
-                
-                                    </select>
-                                    
+                                <div class="input-group mb-3" class="form-group">
 
+                                    <select class="form-select" id="company" name="customer_id">
+                                        @foreach ($customers as $customer)
+                                        <option value=" {{ $customer->id }} "> {{ $customer ->company}}</option>
+                                        @endforeach
                                     </select>
                                 </div>
                             </div>

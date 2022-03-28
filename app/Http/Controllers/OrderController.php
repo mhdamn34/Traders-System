@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use App\Models\Order;
+use App\Models\Customer;
+use App\Models\Employee;
+use App\Models\OrderGrab;
 use App\Models\OrderStatus;
 use Illuminate\Http\Request;
 
@@ -35,6 +38,13 @@ class OrderController extends Controller
 
         return $this->belongsTo(Customers::class, 'id', 'id');
      }
+
+     public function create()
+    {
+        //
+        $customers = Customer::all();
+        return view('Orders.addNewOrder', compact('customers'));
+    }
 
 }
 

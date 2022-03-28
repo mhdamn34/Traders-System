@@ -166,10 +166,8 @@ Route::get('/purchasehistory', function () {
 
 Route::get('/orders', 'OrderController@index');
 // Route::get('/neworder', 'OrderController@index');
+Route::get('/neworder', 'OrderController@create');
 
-Route::get('/neworder', function () {
-    return view('Orders.addNewOrder');
-});
 
 Route::get('/ListShippers', function () {
     return view('shippers.collectData');
