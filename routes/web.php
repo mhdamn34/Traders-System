@@ -196,7 +196,9 @@ Route::group([
 
 Route::get('/post', 'PostController@store')->name('post.store');
 
-Route::get('/OrderGrab', function () {
-    return view('Grab.create');
-});
 
+//RIDER
+
+Route::get('/rider', function () {
+    return view('Grab.index');
+});
