@@ -16,8 +16,8 @@ class OrderGrabController extends Controller
      */
     public function index()
     {
-        // $order_grab = OrderGrab::all();
-        $order_grab = OrderGrab::with('Rider')->get();
+        $order_grab = OrderGrab::all();
+        // $order_grab = OrderGrab::with('Rider')->get();
         return view('Grab.index', compact('order_grab'));
     }
 

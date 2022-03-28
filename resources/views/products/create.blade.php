@@ -17,7 +17,7 @@
             </ul>
         </div>
         @endif
-        <form action="  {{ route('product.store') }}" method="POST">
+        <form action="{{ route('product.store') }}" method="POST">
             @csrf
             <div class="row">
                 <div class="col">
@@ -42,7 +42,14 @@
                     <div class="row mb-3">
                         <label for="supplier" class="col-sm-3 col-form-label">Supplier</label>
                         <div class="col-sm-9">
-                            <input type="text" name="supplier" class="form-control" id="supplier">
+                            <!-- <input type="text" name="supplier" class="form-control" id="supplier"> -->
+                            <div class="input-group mb-3" class="form-group">
+                                <select class="form-select" id="ridername" name="supplier_id">
+                                    @foreach ($suppliers as $supplier)
+                                    <option value=" {{ $supplier->id }} "> {{ $supplier -> company}}</option>
+                                    @endforeach
+                                </select>
+                            </div>
                         </div>
                     </div>
                     <div class="row mb-3">
@@ -92,7 +99,7 @@
                         <div class="col-sm-9">
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" name="discontinued" id="flexCheckDefault">
-                                    <label class="form-check-label" for="flexCheckDefault"></label>
+                                <label class="form-check-label" for="flexCheckDefault"></label>
                                 </input>
 
                             </div>

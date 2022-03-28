@@ -1,6 +1,8 @@
 @extends('layouts.main.app')
 
 @section('content')
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <div class="card">
     <div class="card-header">
         <div class="card-header">

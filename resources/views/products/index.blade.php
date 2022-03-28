@@ -32,9 +32,9 @@
             <thead>
                 <tr>
                     <th scope="col"> ID</th>
-                    <th scope="col"> Name</th>
+                    <th scope="col"> Product Name</th>
                     <th scope="col"> Product Code</th>
-                    <th scope="col"> Category-mail</th>
+                    <th scope="col"> Category</th>
                     <th scope="col"> Supplier</th>
                     <th scope="col" width="200px"> Action</th>
                 </tr>
@@ -46,7 +46,7 @@
                     <td> {{ $product -> product_name}}</td>
                     <td> {{ $product -> product_code}}</td>
                     <td> {{ $product -> category}}</td>
-                    <td> {{ $product -> supplier}}</td>
+                    <td> {{ $product -> supplier_id}}</td>
                     <td>
                         <form action="" method="POST">
                             <div class="btn-group" role="group" aria-label="Basic example">

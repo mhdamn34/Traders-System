@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Customer;
 use App\Models\Product;
+use App\Models\Supplier;
 use Illuminate\Http\Request;
 
 class ProductController extends Controller
@@ -14,6 +16,8 @@ class ProductController extends Controller
      */
     public function index()
     {
+        // $customers = Customer::all();
+        // dd ($customers);
         $products = Product::latest()->paginate(5);
         return view('products.index', compact('products'))
 
@@ -28,7 +32,9 @@ class ProductController extends Controller
      */
     public function create()
     {
-        return view('products.create');
+        $suppliers = Supplier::all();
+        return view('products.create', compact('suppliers'));
+
     }
 
     public function store(Request $request)
@@ -38,7 +44,7 @@ class ProductController extends Controller
             'product_name' => 'required',
             'product_code' => 'required',
             'category' => 'required',
-            'supplier' => 'required',
+            'supplier_id' => 'required',
             'quantity_per_unit' => 'required',
             'description' => 'required',
             'standard_cost' => 'required',
@@ -53,7 +59,8 @@ class ProductController extends Controller
         $product = new Product();
         $product->product_code = $request->product_code;
         $product->product_name = $request->product_name;
-        $product->description = $request->description;       
+        $product->description = $request->description; 
+        $product->supplier_id = $request->supplier_id;       
         $product->standard_cost = $request->standard_cost;
         $product->list_price = $request->list_price;
         $product->reorder_level = $request->reorder_level;
@@ -63,7 +70,7 @@ class ProductController extends Controller
         $product->category = $request->category;
         $product->save();
 
-        return redirect()->route('products.index')
+        return redirect()->route('product.index')
             ->with('success', 'Product added successfully.');
         
     }
