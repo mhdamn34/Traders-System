@@ -31,9 +31,13 @@
                 <td> {{ $order_grab -> order_description }}</td>
                 <td> {{ $order_grab->rider->rider_name }}</td>
                 <td>
-                    <form action=" " method="POST">
+                    <form action="{{ route('Grab.destroy', $order_grab->id) }}" method="POST">
                         <div class="btn-group" role="group" aria-label="Basic example">
+                        <a class="btn btn-primary" href=" {{ route('Grab.create', $order_grab->id) }} " role="button">Update</a>
                             <a class="btn btn-info" href=" " role="button">View</a>
+                            @csrf
+                                @method('DELETE')
+                                <button type="submit" class="btn btn-danger">Delete</button>
                         </div>
                     </form>
                 </td>

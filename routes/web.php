@@ -21,6 +21,8 @@ Route::get('/order_grab', 'OrderGrabController@index')->name('Grab.index');
 Route::get('/create', 'OrderGrabController@create')->name('Grab.create');
 Route::get('/{order_grab}/show', 'OrderGrabController@show')->name('Grab.show');
 Route::post('/order_grab', 'OrderGrabController@store')->name('Grab.store');
+Route::get('/{order_grab}/edit', 'OrderGrabController@edit')->name('Grab.edit');
+Route::delete('order_grabs/{order_grab}', 'OrderGrabController@destroy')->name('Grab.destroy');
 
 //HOMEPAGE
 Route::get('/', function () {

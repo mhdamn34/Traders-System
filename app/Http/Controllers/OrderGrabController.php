@@ -97,8 +97,10 @@ class OrderGrabController extends Controller
      * @param  \App\Models\OrderGrab  $orderGrab
      * @return \Illuminate\Http\Response
      */
-    public function destroy(OrderGrab $orderGrab)
+    public function destroy(OrderGrab $order_grab)
     {
         //
+        $order_grab->delete();
+        return redirect()->route('Grab.index');
     }
 }
