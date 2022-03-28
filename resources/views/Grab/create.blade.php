@@ -30,12 +30,11 @@
                         <label for="company" class="col-sm-3 col-form-label">Rider Name</label>
                         <div class="col-sm-9">
                             <div class="input-group mb-3" class="form-group">
-
-                                <select class="form-select" id="ridername" name="rider_id">        
-                                    <option value="1">Fina</option>
-                                    <option value="3">Ali</option>
-                                    <option value="5">Fixi</option>
-                                    <option value="6">Lili</option>         
+                                <select class="form-select" id="ridername" name="rider_id">    
+                                    <div class="control-group">
+                                        
+                                    </div>  
+                                  
                                 </select>
                             </div>
                         </div>
