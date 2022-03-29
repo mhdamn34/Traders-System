@@ -75,7 +75,7 @@
                 <td>
                     <form action=" {{ route('employee.destroy', $employee->id) }}" method="POST">
                         <div class="btn-group" role="group" aria-label="Basic example">
-                            <a class="btn btn-primary" href=" {{ route('employees.edit', $employee->id) }} " role="button">Update</a>
+                            <a class="btn btn-primary" href=" {{ route('employee.edit', $employee->id) }} " role="button">Update</a>
                             <a class="btn btn-info" href=" {{ route('employee.show', $employee->id) }} " role="button">View</a>
                             @csrf
                             @method('DELETE')

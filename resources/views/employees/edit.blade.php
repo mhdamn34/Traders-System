@@ -3,7 +3,7 @@
 @section('content')
 
 <div class="card">
-    <form action="{{ route('employees.edit', $employee->id) }} " method="POST">
+    <form action="{{ route('employee.update', $employee->id) }} " method="POST">
         <div class="card-header">
             <h4>Update Employee Details</h4>
 
@@ -11,7 +11,7 @@
             @method('PATCH')
             <div class="row">
                 <div class="col d-flex justify-content-end">
-                    <a href=" {{ route('employees.employeesHome') }}" class="btn btn-secondary"> Cancel</a>
+                    <a href=" {{ route('employee.employeesHome') }}" class="btn btn-secondary"> Cancel</a>
                     <button type="submit" class="btn btn-primary"> Save </button>
 
                 </div>

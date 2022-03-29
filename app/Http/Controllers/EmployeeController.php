@@ -96,14 +96,14 @@ class EmployeeController extends Controller
         $Employee->notes = $request->notes ;
         $Employee->save();
 
-        return redirect()->route('employee.show', compact('employee'));
+        return redirect()->route('employee.employeesHome', compact('employee'));
 
     }
 
     public function destroy(Employee $employee){
 
          $employee->delete();
-        return redirect()->route('employees.employeesHome');
+        return redirect()->route('employee.employeesHome');
     }
 
     
