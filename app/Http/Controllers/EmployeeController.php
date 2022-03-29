@@ -96,7 +96,9 @@ class EmployeeController extends Controller
         $Employee->notes = $request->notes ;
         $Employee->save();
 
-        return redirect()->route('employee.employeesHome', compact('employee'));
+        return redirect()->route('employees.employeesHome', compact('employee'))
+        ->with('success', 'Employee update successfully');
+        // return redirect()->route('employees.show', compact('employee'));
 
     }
 

@@ -1,99 +1,115 @@
-@extends('layouts.app')
+@extends('layouts.main.app')
 
 @section('content')
 
 <div class="card">
-    <div class="card-header">
-        <div class="row">
-            <div class="col">
-                <h2>Update your product Status</h2>
-            </div>
-            <div class="col d-flex justify-content-end">
-                <a href=" {{ route('products.index') }}" class="btn btn-secondary"> Back</a>
-            </div>
-        </div>
-    </div>
-
-    @if ($errors -> any())
-
-    <div class="alert alert-danger">
-        <strong>Whoops! Errors </strong>
-        <ul>
-            @foreach ($errors -> all() as $error)
-            <li> {{ $error }} </li>
-            @endforeach
-        </ul>
-    </div>
-
-    @endif
-
-    <div class="card-body">
-        <form action="{{ route('products.update', $product->id) }}" method="POST">
+    <form action=" {{ route('product.edit', $product->id) }} " method="POST">
+        <div class="card-header">
+            <h4>Update Product Details</h4>
 
             @csrf
-            @method('PUT')
-            <div class="col-xs-12 col-sm-12 col-md-12">
-                <div class="form-group">
-                    <strong>Product Name:</strong>
-                    <input type="text" name="productName" class="form-control" value="{{ $product -> productName }}" >
+            @method('PATCH')
+            <div class="row">
+                <div class="col d-flex justify-content-end">
+                    <a href=" {{ route('product.index') }}" class="btn btn-secondary"> Cancel</a>
+                    <button type="submit" class="btn btn-primary"> Save </button>
+
                 </div>
             </div>
+        </div>
+        <div class="card-body">
+            @if ($errors -> any())
 
-            <div class="col-xs-12 col-sm-12 col-md-12">
-                <div class="form-group">
-                    <strong>Quantity per Unit:</strong>
-                    <input type="text" name="quantityPerUnit" class="form-control" value=" {{ $product -> quantityPerUnit }} ">
+            <div class="alert alert-danger">
+                <strong>Whoops! Errors </strong>
+                <ul>
+                    @foreach ($errors -> all() as $error)
+                    <li> {{ $error }} </li>
+                    @endforeach
+                </ul>
+            </div>
+            @endif
+
+            <div class="row">
+                <div class="col">
+                    <div class="row mb-3">
+                        <label for="company" class="col-sm-3 col-form-label">Product Name</label>
+                        <div class="col-sm-9">
+                            <input type="text" name="product_name" class="form-control" value="{{ $product->product_name }}">
+                        </div>
+                    </div>
+
+                    <div class="row mb-3">
+                        <label for="company" class="col-sm-3 col-form-label">Product Code</label>
+                        <div class="col-sm-9">
+                            <input type="text" name="product_code" class="form-control" value="{{ $product->product_code }}">
+                        </div>
+                    </div>
+
+                    <div class="row mb-3">
+                        <label for="company" class="col-sm-3 col-form-label">Description</label>
+                        <div class="col-sm-9">
+                            <input type="text" name="description" class="form-control" value="{{ $product->description }}">
+                        </div>
+                    </div>
+
+                    <div class="row mb-3">
+                        <label for="company" class="col-sm-3 col-form-label">Standard Cost</label>
+                        <div class="col-sm-9">
+                            <input type="text" name="standard_cost" class="form-control" value="{{ $product->standard_cost }}">
+                        </div>
+                    </div>
+
+                    <div class="row mb-3">
+                        <label for="company" class="col-sm-3 col-form-label">List Price</label>
+                        <div class="col-sm-9">
+                            <input type="text" name="list_price" class="form-control" value="{{ $product->list_price }}">
+                        </div>
+                    </div>
+
+                    <div class="row mb-3">
+                        <label for="company" class="col-sm-3 col-form-label">Reorder Level</label>
+                        <div class="col-sm-9">
+                            <input type="text" name="reorder_level" class="form-control" value="{{ $product->reorder_level }}">
+                        </div>
+                    </div>
+
+                    <div class="row mb-3">
+                        <label for="company" class="col-sm-3 col-form-label">Target Level</label>
+                        <div class="col-sm-9">
+                            <input type="text" name="target_level" class="form-control" value="{{ $product->target_level }}">
+                        </div>
+                    </div>
+
+                    <div class="row mb-3">
+                        <label for="company" class="col-sm-3 col-form-label">Quantity per Unit</label>
+                        <div class="col-sm-9">
+                            <input type="text" name="quantity_per_unit" class="form-control" value="{{ $product->quantity_per_unit }}">
+                        </div>
+                    </div>
+
+                    <div class="row mb-3">
+                        <label for="company" class="col-sm-3 col-form-label">Category</label>
+                        <div class="col-sm-9">
+                            <input type="text" name="category" class="form-control" value="{{ $product->category }}">
+                        </div>
+                    </div>
+
+                    <div class="row mb-3">
+                        <label for="company" class="col-sm-3 col-form-label">Discontinued</label>
+                        <div class="col-sm-9">
+                            <input type="text" name="discontinued" class="form-control" value="{{ $product->discontinued }}">
+                        </div>
+                    </div>
+
+
                 </div>
             </div>
+    </form>
 
-            <div class="col-xs-12 col-sm-12 col-md-12">
-                <div class="form-group">
-                    <strong>Unit Price:</strong>
-                    <input type="text" name="unitPrice" class="form-control" value=" {{ $product -> unitPrice }} " placeholder="Unit Price">
-                </div>
-            </div>
-
-            <div class="col-xs-12 col-sm-12 col-md-12">
-                <div class="form-group">
-                    <strong>Unit in Stock</strong>
-                    <input type="number" name="unitStock" class="form-control" value=" {{ $product -> unitStock }} " placeholder="Unit in Stock">
-                </div>
-            </div>
-
-            <div class="col-xs-12 col-sm-12 col-md-12">
-                <div class="form-group">
-                    <strong>Unit on Order:</strong>
-                    <input type="number" name="unitOrder" class="form-control" value=" {{ $product -> unitOrder }} " placeholder="Unit on Order">
-                </div>
-            </div>
-
-            <div class="col-xs-12 col-sm-12 col-md-12">
-                <div class="form-group">
-                    <strong>Reorder level:</strong>
-                    <input type="number" name="reorderLevel" class="form-control" value=" {{ $product -> reorderLevel }} " placeholder="Reorder Level">
-                </div>
-            </div>
-
-            <div class="col-xs-12 col-sm-12 col-md-12">
-                <div class="form-group">
-                    <label for="discontinued">Discontinued Status</label>
-                    <select name="discontinued" class="form-control" aria-label="Default select example" value=" {{ $product -> discontinued }} ">
-                        <option value="" disabled>Discontinued</option>
-                        <option value="1">Yes</option>
-                        <option value="0">No</option>
-                    </select>
-                </div>
-            </div>
-
-            <div class="col-md-12 text-center">
-                <button type="submit" class="btn btn-success">Update</button>
-            </div>
-
-        </form>
-
-    </div>
 </div>
 
 
+</div>
 
 @endsection

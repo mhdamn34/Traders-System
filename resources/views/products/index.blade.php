@@ -48,7 +48,7 @@
                     <td> {{ $product -> category}}</td>
                     <td> {{ $product -> supplier_id}}</td>
                     <td>
-                        <form action="" method="POST">
+                        <form action="{{ route('product.destroy', $product->id) }}" method="POST">
                             <div class="btn-group" role="group" aria-label="Basic example">
                                 <a class="btn btn-primary" href=" {{ route('product.edit', $product->id) }} " role="button">Update</a>
                                 <a class="btn btn-info" href=" {{ route('product.show', $product->id) }} " role="button">View</a>
