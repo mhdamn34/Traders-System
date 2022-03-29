@@ -3,7 +3,7 @@
 @section('content')
 
 <div class="card">
-    <form action="{{ route('employees.update', $employee->id) }} " method="POST">
+    <form action="{{ route('employees.edit', $employee->id) }} " method="POST">
         <div class="card-header">
             <h4>Update Employee Details</h4>
 
@@ -109,42 +109,41 @@
                         <div class="col-sm-9">
                             <input type="text" name="postal_code" class="form-control" id="postal_code" value="{{ $employee->postal_code}}">
                         </div>
-                    </div>
-                    <div class="row mb-3">
-                        <label for="country" class="col-sm-3 col-form-label">Country/Region</label>
-                        <div class="col-sm-8">
-                            <input type="text" name="country" class="form-control" id="country" value="{{ $employee
+                     <div class="row mb-3">
+                    <label for="country" class="col-sm-3 col-form-label">Country/Region</label>
+                    <div class="col-sm-8">
+                        <input type="text" name="country" class="form-control" id="country" value="{{ $employee
                                 ->country}}">
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="row mb-3">
-                        <label for="email" class="col-sm-2 col-form-label">Email</label>
-                        <div class="col-sm-10">
-                            <input type="text" name="email_address" class="form-control" id="email_address" value="{{ $employee->email_address}}">
-                        </div>
-                    </div>
-                    <div class="row mb-3">
-                        <label for="web" class="col-sm-2 col-form-label">Web Page</label>
-                        <div class="col-sm-10">
-                            <input type="text" name="web_page" class="form-control" id="web_page" value="{{ $employee->web_page}}">
-                        </div>
-                    </div>
-                    <div class="row mb-3">
-                        <label for="notes" class="col-sm-2 col-form-label">Notes</label>
-                        <div class="col-sm-10">
-                            <input type="text" name="notes" class="form-control" id="notes" value="{{ $employee->notes}}">
-                        </div>
-                    </div>
-                    <div class="row mb-3">
-                        <label for="img" class="col-sm-2 col-form-label">Image</label>
-                        <div class="col-sm-10">
-                            <input type="file" class="form-control" id="img">
-                        </div>
                     </div>
                 </div>
             </div>
+            <div class="col">
+                <div class="row mb-3">
+                    <label for="email" class="col-sm-2 col-form-label">Email</label>
+                    <div class="col-sm-10">
+                        <input type="text" name="email_address" class="form-control" id="email_address" value="{{ $employee->email_address}}">
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <label for="web" class="col-sm-2 col-form-label">Web Page</label>
+                    <div class="col-sm-10">
+                        <input type="text" name="web_page" class="form-control" id="web_page" value="{{ $employee->web_page}}">
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <label for="notes" class="col-sm-2 col-form-label">Notes</label>
+                    <div class="col-sm-10">
+                        <input type="text" name="notes" class="form-control" id="notes" value="{{ $employee->notes}}">
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <label for="img" class="col-sm-2 col-form-label">Image</label>
+                    <div class="col-sm-10">
+                        <input type="file" class="form-control" id="img">
+                    </div>
+                </div>
+            </div>
+        </div>
     </form>
 
 </div>
