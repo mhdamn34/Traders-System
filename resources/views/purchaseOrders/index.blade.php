@@ -28,7 +28,7 @@
         <table class="table table-bordered">
             <thead>
                 <tr>
-                    <th scope="col"> id</th>
+                    <th scope="col"> ID</th>
                     <th scope="col"> Status</th>
                     <th scope="col"> Supplier</th>
                     <th scope="col"> Total</th>
@@ -42,7 +42,7 @@
                 @foreach ($purchaseOrders as $purchaseOrder)
                 <tr>
                     <td> {{ $purchaseOrder -> id }} </td>
-                    <td> {{ $purchaseOrder -> status }}</td>
+                    <td> {{ $purchaseOrder -> status_id }}</td>
                     <td> {{ $purchaseOrder -> supplier_id }}</td>
                     <td> {{ $purchaseOrder -> payment_amount }}</td>
                     <td> {{ $purchaseOrder -> submitted_date }}</td>
