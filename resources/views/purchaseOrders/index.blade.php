@@ -8,7 +8,7 @@
 
         <div class="row">
             <div class="col">
-                <a href="" class="btn btn-primary"> Add new Purchase</a>
+                <a href=" {{ route('purchaseOrder.create') }} " class="btn btn-primary"> Add new Purchase</a>
             </div>
             <div class="col d-flex justify-content-end">
                 <a href=" {{ url('/') }} " class="btn btn-secondary">Home</a>
@@ -39,7 +39,28 @@
                 </tr>
             </thead>
             <tbody>
-
+                @foreach ($purchaseOrders as $purchaseOrder)
+                <tr>
+                    <td> {{ $purchaseOrder -> id }} </td>
+                    <td> {{ $purchaseOrder -> status }}</td>
+                    <td> {{ $purchaseOrder -> supplier_id }}</td>
+                    <td> {{ $purchaseOrder -> payment_amount }}</td>
+                    <td> {{ $purchaseOrder -> submitted_date }}</td>
+                    <td> {{ $purchaseOrder -> approved_by }}</td>
+                    <td> {{ $purchaseOrder -> approved_date }}</td>
+                    <td>
+                        <form action="{{ route('purchaseOrder.destroy', $purchaseOrder->id) }}" method="POST">
+                            <div class="btn-group" role="group" aria-label="Basic example">
+                                <a class="btn btn-primary" href=" {{ route('purchaseOrder.create', $purchaseOrder->id) }} " role="button">Update</a>
+                                <a class="btn btn-info" href="{{ route('purchaseOrder.show', $purchaseOrder->id) }}" role="button">View</a>
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="btn btn-danger">Delete</button>
+                            </div>
+                        </form>
+                    </td>
+                </tr>
+                @endforeach
             </tbody>
         </table>
     </div>

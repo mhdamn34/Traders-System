@@ -14,5 +14,5 @@ class Supplier extends Model
         'notes'
     ];
 
-    use SoftDeletes;
+
 }

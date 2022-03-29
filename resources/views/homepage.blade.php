@@ -166,7 +166,7 @@
             <a class="btn btn-primary" href=" {{ url('/supplier') }} ">Supplier</a>
             <a class="btn btn-primary" href="{{ url('/shippers') }}">Shipper</a>
             <a class="btn btn-primary" href="{{ url('/orders') }}">Orders</a>
-            <a class="btn btn-primary" href=" {{ url('/purchase') }} ">Purchase Orders</a>
+            <a class="btn btn-primary" href=" {{ url('/purchaseOrder') }} ">Purchase Orders</a>
             <a class="btn btn-primary" href=" {{ url('/employee') }}">Employees</a>
             <a class="btn btn-primary" href=" {{ url('/customer') }}">Customer</a>
             <a class="btn btn-primary" href=" {{ url('/product') }}"> Product</a>

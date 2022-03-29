@@ -15,7 +15,7 @@
                     <a class="nav-link " href="#">Approve Purchase</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link ">Cancel Purchase</a>
+                    <a class="nav-link " href="#">Cancel Purchase</a>
                 </li>
             </ul>
 

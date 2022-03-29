@@ -93,12 +93,19 @@ Route::delete('/employee/{employee}', 'EmployeeController@destroy')->name('emplo
 
 
 //PURCHASE ORDERS
-Route::get('/purchase', function () {
-    return view('purchaseOrders.index');
+Route::group([
+    'prefix' => 'purchaseOrder',
+    'as' => 'purchaseOrder.'
+], function () {
+    Route::get('/', 'purchaseOrderController@index')->name('index');
+    Route::get('/create', 'purchaseOrderController@create')->name('create');
+    Route::post('/', 'purchaseOrderController@store')->name('store');
+    Route::get('/{purchaseOrder}', 'purchaseOrderController@show')->name('show');
+    Route::get('/{purchaseOrder}/edit', 'purchaseOrderController@edit')->name('edit');
+    Route::patch('/{purchaseOrder}', 'purchaseOrderController@update')->name('update');
+    Route::delete('/{purchaseOrder}', 'purchaseOrderController@destroy')->name('destroy');
 });
-Route::get('/createPurchase', function () {
-    return view('purchaseOrders.create');
-});
+
 
 
 
