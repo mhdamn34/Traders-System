@@ -19,33 +19,24 @@ class PurchaseOrderController extends Controller
     public function store(Request $request) {
 
         $request->validate([
-            'company' => 'required',
-            'first_name' => 'required',
-            'last_name' => 'required',
-            'email_address' => 'required',
-            'job_title' => 'required',
-            'business_phone' => 'required',
-            'mobile_phone' => 'required',
-
+            'supplier_id' => 'required',
         ]);
 
         $purchaseOrders = new Purchase_Order();
-        $purchaseOrders->company = $request->company;
-        $purchaseOrders->first_name = $request->first_name;
-        $purchaseOrders->last_name = $request->last_name;       
-        $purchaseOrders->email_address = $request->email_address;
-        $purchaseOrders->job_title = $request->job_title;
-        $purchaseOrders->business_phone = $request->business_phone;
-        $purchaseOrders->home_phone = $request->home_phone;
-        $purchaseOrders->mobile_phone = $request->mobile_phone;
-        $purchaseOrders->fax_number = $request->fax_number;
-        $purchaseOrders->address = $request->address;
-        $purchaseOrders->city = $request->city;
-        $purchaseOrders->state = $request->state;
-        $purchaseOrders->postal_code = $request->postal_code;
-        $purchaseOrders->country = $request->country;
-        $purchaseOrders->web_page = $request->web_page;
+       
+        $purchaseOrders->created_by = $request->created_by;
+        $purchaseOrders->submitted_date = $request->submitted_date;
+        $purchaseOrders->creation_date = $request->creation_date;
+        $purchaseOrders->expected_date = $request->expected_date;
+        $purchaseOrders->approved_date = $request->approved_date;
+        $purchaseOrders->payment_date = $request->payment_date;
+
+        $purchaseOrders->taxes = $request->taxes;
+        $purchaseOrders->shipping_fee = $request->shipping_fee;
+        $purchaseOrders->payment_amount = $request->payment_amount;
+        $purchaseOrders->payment_method = $request->payment_method;
         $purchaseOrders->notes = $request->notes;
+        
         $purchaseOrders->save();
 
         return redirect()->route('purchaseOrders.index')

@@ -14,5 +14,9 @@ class Supplier extends Model
         'notes'
     ];
 
+    public function purchase_order() {
+        return $this->hasMany(Purchase_Order::class);
+    }
+
 
 }

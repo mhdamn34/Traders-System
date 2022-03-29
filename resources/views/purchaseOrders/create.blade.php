@@ -20,7 +20,7 @@
             </ul>
 
             <div class="col d-flex justify-content-end">
-                <a href=" {{ url('/purchase') }} " class="btn btn-secondary"> Close</a>
+                <a href=" {{ route('purchaseOrder.index') }} " class="btn btn-secondary"> Close</a>
             </div>
         </div>
     </div>
