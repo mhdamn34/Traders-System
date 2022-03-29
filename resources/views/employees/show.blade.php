@@ -8,7 +8,7 @@
 
         <div class="row">
             <div class="col d-flex justify-content-end">
-                <a href=" {{ route('employee.employeesHome') }} " class="btn btn-secondary"> Back</a>
+                <a href=" {{ route('employees.employeesHome') }} " class="btn btn-secondary"> Back</a>
             </div>
         </div>
     </div>

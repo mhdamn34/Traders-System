@@ -63,14 +63,10 @@ Route::group([
 
 //ROUTE EMPLOYEE
 Route::get('/employee', 'EmployeeController@index')->name('employees.employeesHome');
-// Route::get('/employee', function() {
-//     return view('employees.employeesHome');
-// });
-// Route::get('employee/createEmployee', 'EmployeeController@create')->name('employees.create');
 Route::get('/createEmployee', 'EmployeeController@create')->name('employee.createEmployee');
-Route::get('/{employee}/show', 'EmployeeController@show')->name('employee.show');
+Route::get('/employee/{employee}/show', 'EmployeeController@show')->name('employee.show');
 Route::post('/employee', 'EmployeeController@store')->name('employee.store');
-Route::get('/{employee}/edit', 'EmployeeController@edit')->name('employee.edit');
+Route::get('/employee/{employee}/edit', 'EmployeeController@edit')->name('employee.edit');
 Route::patch('/employee/{employee}', 'EmployeeController@update')->name('employee.update');
 Route::delete('/employee/{employee}', 'EmployeeController@destroy')->name('employee.destroy');
 

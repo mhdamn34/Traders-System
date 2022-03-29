@@ -13,8 +13,6 @@ class Employee extends Model
         'notes' 
     ];
 
-    use SoftDeletes;
-
     public function Employee_Privileges() {
         return $this->hasMany('Employee_Privileges');
     }
