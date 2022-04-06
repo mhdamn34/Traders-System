@@ -5,7 +5,29 @@
 <div class="card">
     <div class="card-header">
         <h3>Supplier List</h3>
-        <div class="row">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="{{ route('supplier.create') }}">New Supplier</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href=" ">Collect Data via E-mail</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href=" ">Add From Outlook</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href=" ">E-mail List</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href=" {{ url('/') }} ">Home</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        <!-- <div class="row">
             <div class="col">
                 <a href="{{ route('supplier.create') }}" class="btn btn-primary">New Supplier</a>
                 <a href="" class="btn btn-primary"> Collect Data via E-mail</a>
@@ -15,7 +37,7 @@
             <div class="col d-flex justify-content-end">
                 <a href=" {{ url('/') }} " class="btn btn-secondary">Home</a>
             </div>
-        </div>
+        </div> -->
     </div>
     <div class="card-body">
 

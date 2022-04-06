@@ -12,7 +12,6 @@ class EmployeeController extends Controller
         $employees=Employee::all();
         return view('employees.employeesHome', compact('employees'));
 
-
     }
 
     public function create(){

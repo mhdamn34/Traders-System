@@ -6,6 +6,7 @@
     <div class="card-header">
         <h3> Purchase Order # (New)</h3>
 
+        
         <div class="row">
             <ul class="nav nav-pills justify-content-centent">
                 <li class="nav-item">
@@ -33,11 +34,13 @@
             </div>
             <div class="col">
                 <div class="input-group mb-3" class="form-group">
-                    <select class="form-select" id="supplierSelect">
-                        <option selected> </option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                    </select>
+                    <!-- <select class="form-select" id="supplierSelect"> -->
+                        <select class="form-select" id="purchase" name="supplier">
+                            @foreach ($suppliers as $supplier)
+                            <option value=" {{ $supplier->id }} "> {{ $supplier -> company}}</option>
+                            @endforeach
+                        </select>
+                    <!-- </select> -->
                 </div>
             </div>
             <div class="col-2">

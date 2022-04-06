@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Purchase_Order;
+use App\Models\Supplier;
 use Illuminate\Http\Request;
 
 class PurchaseOrderController extends Controller
@@ -13,7 +14,9 @@ class PurchaseOrderController extends Controller
     }
 
     public function create() {
-        return view('purchaseOrders.create');
+        $suppliers = Supplier::all();
+        return view('purchaseOrders.create', compact('suppliers'));
+        // return view('purchaseOrders.create');
     }
     
     public function store(Request $request) {
