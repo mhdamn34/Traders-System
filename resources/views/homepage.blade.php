@@ -42,11 +42,11 @@
                     </div>
 
                     <div class="card-body">
-                        
+
                         <div class="row">
                             <div class="col-xl-4 col-sm-12">
                                 <div class="card">
-                                    <div class="card-body">
+                                    <div class="card-body" style="height: 300px;overflow-y:scroll">
                                         <div class="row">
                                             <div class="col">
                                                 <h5 class="card-title">Active Orders</h5>
@@ -158,7 +158,7 @@
                             </div>
                             <div class="col-xl-4 col-sm-12">
                                 <div class="card">
-                                    <div class="card-body">
+                                    <div class="card-body" style="height: 300px;overflow-y:scroll">
                                         <div class="row">
                                             <div class="col">
                                                 <h5 class="card-title">Quick Links</h5>
@@ -203,7 +203,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>  
+                        </div>
 
                         <nav class="navbar navbar-expand-lg navbar-light bg-light">
                             <div class="container-fluid">
