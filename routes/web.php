@@ -4,16 +4,13 @@ use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
 use PhpParser\Node\Expr\FuncCall;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
+
+//HOMEPAGE
+Route::get('/', function () {
+    return view('homepage');
+});
+
+
 Route::get('/article', 'ArticleController@store')->name('article.store');
 
 //ORDER GRAB ROUTE
@@ -24,11 +21,6 @@ Route::get('/show/{order_grab}', 'OrderGrabController@show')->name('Grab.show');
 Route::post('/order_grab', 'OrderGrabController@store')->name('Grab.store');
 Route::get('/{order_grab}/edit', 'OrderGrabController@edit')->name('Grab.edit');
 Route::delete('order_grabs/{order_grab}', 'OrderGrabController@destroy')->name('Grab.destroy');
-
-//HOMEPAGE
-Route::get('/', function () {
-    return view('homepage');
-});
 
 
 // ROUTE PRODUCT
