@@ -8,9 +8,10 @@ use PhpParser\Node\Expr\FuncCall;
 Route::get('/', function () {
     return view('homepage');
 });
-
-
-//test sidebar
+//test chart
+Route::get('/pie', function () {
+    return view('dashboard.pie');
+});
 
 
 Route::get('/article', 'ArticleController@store')->name('article.store');
