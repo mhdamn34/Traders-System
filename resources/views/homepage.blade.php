@@ -15,7 +15,7 @@
                 <div class="card">
                     <div class="card-header">
                         <div class="card-header">
-                            <h3>Northwind Traders Homepage</h3>
+                            <h3>Traders Homepage</h3>
                         </div>
                         <nav class="navbar navbar-expand-lg navbar-light bg-light">
                             <div class="container-fluid">
@@ -30,12 +30,12 @@
                                                 </select>
                                             </div>
                                         </li>
-                                        <li class="nav-item">
+                                        <!-- <li class="nav-item">
                                             <a class="nav-link active" aria-current="page" href="#">New Customer Order</a>
                                         </li>
                                         <li class="nav-item">
                                             <a class="nav-link active" href="#">New Purchase Order</a>
-                                        </li>
+                                        </li> -->
                                     </ul>
                                 </div>
                             </div>
@@ -205,8 +205,7 @@
                                 </div>
                             </div>
                         </div>
-
-                        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                        <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
                             <div class="container-fluid">
                                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
@@ -236,18 +235,7 @@
                                     </li>
                                 </ul>
                             </div>
-                        </nav>
-
-                        <!-- <div class="btn-group" role="group" aria-label="Basic example">
-                <a class="btn btn-primary" href=" {{ url('/supplier') }} ">Supplier</a>
-                <a class="btn btn-primary" href="{{ url('/shippers') }}">Shipper</a>
-                <a class="btn btn-primary" href="{{ url('/orders') }}">Orders</a>
-                <a class="btn btn-primary" href=" {{ url('/purchaseOrder') }} ">Purchase Orders</a>
-                <a class="btn btn-primary" href=" {{ url('/employee') }}">Employees</a>
-                <a class="btn btn-primary" href=" {{ url('/customer') }}">Customer</a>
-                <a class="btn btn-primary" href=" {{ url('/product') }}"> Product</a>
-                <a class="btn btn-primary" href=" {{ url('/order_grab') }}"> Order</a>
-            </div> -->
+                        </nav> -->
                     </div>
                 </div>
             </div>

@@ -4,14 +4,11 @@ use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
 use PhpParser\Node\Expr\FuncCall;
 
-//testpage route
+//homepage
 Route::get('/', function () {
-    return view('test.testpage');
-});
-//HOMEPAGE
-Route::get('/homepage', function () {
     return view('homepage');
 });
+
 
 //test sidebar
 

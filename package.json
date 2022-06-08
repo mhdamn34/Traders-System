@@ -19,6 +19,7 @@
         "sass-loader": "^8.0.0"
     },
     "dependencies": {
-        "@ibm/plex": "^6.0.2"
+        "@ibm/plex": "^6.0.2",
+        "bootstrap-icons": "^1.8.3"
     }
 }

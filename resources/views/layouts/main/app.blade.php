@@ -19,10 +19,10 @@
 
         <!-- navbar temp -->
         @include('layouts.main.navbar')
-
-        <!-- main pages -->
-        @include('layouts.main.main')
-
+        
+        <!-- sidebar and main (yield)-->
+        @include('layouts.main.sidebar')
+        
     </div>
 
     <!-- script -->
