@@ -5,29 +5,17 @@
 <div class="card">
     <div class="card-header">
         <h3>Product List</h3>
-
-        <nav class="navbar navbar-expand navbar-light bg-light">
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="{{ route ('product.create') }}">New Product <span class="sr-only"></span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Collect Data via E-mail</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Add From Outlook</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">E-mail List</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="  {{ url('/') }} ">Home</a>
-                    </li>
-                </ul>
+        <div class="row">
+            <div class="col">
+                <a href="{{ url('/product/create') }}" class="btn btn-primary"> New Product</a>
+                <a href="" class="btn btn-primary"> Collect Data via E-mail</a>
+                <a href="" class="btn btn-primary"> Add From Outlook</a>
+                <a href="" class="btn btn-primary"> E-mail List</a>
             </div>
-        </nav>
-
+            <div class="col d-flex justify-content-end">
+                <a href=" {{ url('/') }} " class="btn btn-secondary">Home</a>
+            </div>
+        </div>
     </div>
     <div class="card-body">
 

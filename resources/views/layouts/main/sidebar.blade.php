@@ -57,7 +57,7 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="#customermenu" class="nav-link px-0 align-middle">
+                        <a href="#customermenu" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
                             <i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline">Customers</span> </a>
                         <ul class="collapse nav flex-column ms-1" id="customermenu" data-bs-parent="#menu">
                             <li>
